@@ -1,6 +1,9 @@
 este archivo lo he creado para crear 
-un puto conflicto de verdad
-pq no hay cojones de que ambas ramas de
+joder
+joder
+david es mi luz
+buuufffff
+
 git se 
 
 
