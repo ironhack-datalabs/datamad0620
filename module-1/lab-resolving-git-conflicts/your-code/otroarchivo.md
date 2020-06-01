@@ -1,10 +1,13 @@
 este archivo lo he creado para crear 
-yo creo que si
-aver aver aver 
-a ver
+joder
+joder
+david es mi luz
+buuufffff
+
+git se 
 
 
-y aqui escribo otra cosa diferente
+metan de hostias una a otra
 
 
 
