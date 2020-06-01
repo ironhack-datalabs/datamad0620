@@ -1,11 +1,11 @@
 este archivo lo he creado para crear 
-un puto conflicto de verdad
-pq no hay cojones de que ambas ramas de
-git se 
+yo creo que si
+aver aver aver 
+a ver
 
 
 y aqui escribo otra cosa diferente
 
 
 
-ole
+pordios
