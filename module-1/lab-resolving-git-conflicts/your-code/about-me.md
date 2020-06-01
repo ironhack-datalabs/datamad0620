@@ -1,1 +1,1 @@
-hola me llamo irene y soy bailaora.
+hola me llamo irene.
