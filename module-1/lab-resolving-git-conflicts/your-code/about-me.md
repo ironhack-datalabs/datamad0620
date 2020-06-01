@@ -11,4 +11,4 @@
 # What will I do after the bootcamp?
 
 * I would like to work as Data Analytics to carry out studies and market analysis
-* Joining a job position that fulfills me
+* Joining a job position that fulfills me. Work with data, manipulate it in different tools like Geographic Information System, to carry out socio-economic analyzes. 
