@@ -12,3 +12,6 @@
 
 * I would like to work as Data Analytics to carry out studies and market analysis
 * Joining a job position that fulfills me
+
+Sincerly,
+Nicola
