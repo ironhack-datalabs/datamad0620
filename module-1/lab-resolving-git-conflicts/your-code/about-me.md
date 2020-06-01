@@ -1,8 +1,6 @@
-# Who am I
-
-* Where are you from? Spain 
-* What do you do? Coding
-* Do you have previous experience with technology/data? Yes
+ajsdajsdjajsd
+ajsdjasjd
+asdjasjdjs
 
 # Why am I here
 
