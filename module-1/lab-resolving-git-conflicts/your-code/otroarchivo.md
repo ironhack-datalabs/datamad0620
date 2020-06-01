@@ -4,7 +4,7 @@ pq no hay cojones de que ambas ramas de
 git se 
 
 
-enfrenten y me den conflicto
+y aqui escribo otra cosa diferente
 
 
 
