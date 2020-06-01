@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Me llamo Jaime Sanz.
 Soy de Pozuelo de Alarcón.
 Estudio ADE en inglés en el IE.
@@ -10,3 +11,15 @@ Trabajar y seguir aprendiendo sobre la tecnología.
 Me gusta el tema banca/consultoría.
 Liderando a un equipo, eventualmente.
 Formarme lo más posible y saber de todo, y, eventualmente, ganar mucho dinero.
+=======
+me llamo jaime.
+vivo en madrid.
+estudio en el IE.
+nada.
+un amigo.
+no sé.
+currar.
+spacex.
+vendedor de cohetes.
+ser presidente de los datos unidos.
+>>>>>>> lab-resolving-git-conflict2
