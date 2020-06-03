@@ -18,6 +18,6 @@ Open the `main.ipynb` file in the `your-code` directory. Follow the instructions
 
 Upon completion, add your deliverables to git. Then commit git and push your branch to the remote.
 
-## Resources
+## Resources.
 
 [Functional Programming in Python](https://docs.python.org/2/howto/functional.html)
