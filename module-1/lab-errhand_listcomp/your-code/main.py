@@ -13,6 +13,7 @@ import math
 import os
 import random
 from random import sample
+import sys 
 
 """
 
@@ -183,22 +184,27 @@ except(ZeroDivisionError, TypeError):
     print("your second number cannot be 0. You need to write a number, not a letter")
 
 
-"""
+
 #18. Handle the exception thrown by the code below by using try and except blocks. 
 # Check in provided resources the type of error you may use. 
 try:
     f = open('testfile','r')
-    print(f.write('Test write this'))
+    f.write('Test write this')
 except FileNotFoundError:
-    
     print("This file do not exist, select the correct file")
-"""
+
 #19. Handle the exceptions that can be thrown by the code below using try and except blocks. 
 #Hint: the file could not exist and the data could not be convertable to int
 
-fp = open('myfile.txt')
+
+try:
+    fp = open('myfile.txt')
     line = f.readline()
     i = int(s.strip())
+except FileNotFoundError:
+    print("This file do not exist, select the correct file")
+finally:
+    print("Bye")
 
 
 
@@ -209,10 +215,17 @@ fp = open('myfile.txt')
 # You will probably need to import sys 
 
 def linux_interaction():
-    assert ('linux' in sys.platform), "Function can only run on Linux systems."
-    print('Doing something.')
+    try:
+        assert ('linux' in sys.platform), "Function can only run on Linux systems."
+        return 'Doing something.'
+    except AssertionError:
+        print("Function can only run on Linux systems")
+        return "Install Linux or try with another function"
+print(linux_interaction())
+    
 
 
+"""
 # Bonus Questions:
 
 # You will need to make some research on dictionary comprehension to solve the following questions
@@ -236,5 +249,3 @@ def linux_interaction():
 
 Total_Marks = int(input("Enter Total Marks Scored: ")) 
 Num_of_Sections = int(input("Enter Num of Sections: "))"""
-
-
