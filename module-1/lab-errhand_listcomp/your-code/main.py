@@ -134,7 +134,7 @@ print(floats)
 
   for i in ['a','b','c']:
       print i**2
- """
+ 
 
 
 
@@ -168,7 +168,7 @@ except Exception as e:
 
 
 
-"""
+
 #17. Handle at least two kind of different exceptions when dividing a couple of numbers provided by the user. 
 # Hint: take a look on python input function. 
 # Check in provided resources the type of error you may use. 
@@ -183,7 +183,7 @@ except Exception as e:
     print(e)
     print("No puedes dividir strings, si puedes dividir integers o floats por ejemplo")
 
-"""
+
 
 #18. Handle the exception thrown by the code below by using try and except blocks. 
 # Check in provided resources the type of error you may use. 
@@ -200,15 +200,15 @@ except Exception as e:
 #19. Handle the exceptions that can be thrown by the code below using try and except blocks. 
 #Hint: the file could not exist and the data could not be convertable to int
 
-fp = open('myfile.txt')
-    line = f.readline()
-    i = int(s.strip())
+try:
+  fp = open('myfile.txt')
+  line = f.readline()
+  i = int(s.strip())
+except Exception as e:
+    print(e)  
 
 
 
-
-
-"""
 #20. The following function can only run on a Linux system. 
 # The assert in this function will throw an exception if you call it on an operating system other than Linux. 
 # Handle this exception using try and except blocks. 
@@ -217,7 +217,11 @@ fp = open('myfile.txt')
 def linux_interaction():
     assert ('linux' in sys.platform), "Function can only run on Linux systems."
     print('Doing something.')
+"""
 
+
+
+"""
 
 # Bonus Questions:
 
