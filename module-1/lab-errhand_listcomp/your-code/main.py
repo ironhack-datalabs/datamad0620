@@ -131,22 +131,28 @@ print(floats)
 
 
 
-"""
-#14. Handle the exception thrown by the code below by using try and except blocks. 
 
+#14. Handle the exception thrown by the code below by using try and except blocks. 
+#Hola! No sé si he entendido bien lo que pedía el ejercicio..
 
 for i in ['a','b','c']:
-    print i**2
-
-"""
+    try: 
+        print(i**2)   
+    except Exception as e:
+        print(e)
+        print ("Try again or continue with next")
+      
 #15. Handle the exception thrown by the code below by using try and except blocks. 
 #Then use a finally block to print 'All Done.'
 # Check in provided resources the type of error you may use. 
-
 x = 5
 y = 0
-
-z = x/y
+try:
+    z = x/y
+except Exception as e: 
+    print(e)
+    print("ZeroDivisionError: division by zero") 
+    print("All Done")
 
 
 
@@ -154,26 +160,39 @@ z = x/y
 #16. Handle the exception thrown by the code below by using try and except blocks. 
 # Check in provided resources the type of error you may use. 
 
-abc=[10,20,20]
-print(abc[3])
 
+abc=[10,20,20]
+try:
+    print(abc[3])
+except Exception as e:
+    print(e)
+    print("This number is out of the scope, there is no such a large index in this array")
 
 #17. Handle at least two kind of different exceptions when dividing a couple of numbers provided by the user. 
 # Hint: take a look on python input function. 
 # Check in provided resources the type of error you may use. 
 
+user_input1 = input("type a number: ")
+user_input2 = input("type a second number: ")
+
+try:
+    print(user_input1/user_input2)
+    
+    
+except(ZeroDivisionError, TypeError):
+    print("your second number cannot be 0. You need to write a number, not a letter")
 
 
-
+"""
 #18. Handle the exception thrown by the code below by using try and except blocks. 
 # Check in provided resources the type of error you may use. 
-
-f = open('testfile','r')
-f.write('Test write this')
-
-
-
-
+try:
+    f = open('testfile','r')
+    print(f.write('Test write this'))
+except FileNotFoundError:
+    
+    print("This file do not exist, select the correct file")
+"""
 #19. Handle the exceptions that can be thrown by the code below using try and except blocks. 
 #Hint: the file could not exist and the data could not be convertable to int
 
