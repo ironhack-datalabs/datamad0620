@@ -207,9 +207,14 @@ except OSError as e:
 #19. Handle the exceptions that can be thrown by the code below using try and except blocks. 
 #Hint: the file could not exist and the data could not be convertable to int
 
-fp = open('myfile.txt')
+try:
+    fp = open('myfile.txt')
     line = f.readline()
     i = int(s.strip())
+except ValueError:
+    print("Could not convert data to an integer.")
+except OSError as e:
+    print ("Directorio no existe")
 
 
 
@@ -232,13 +237,24 @@ def linux_interaction():
 # Hint: we need to continually keep checking until we get an integer.
 # Use a while loop with a try,except, else block to account for incorrect inputs.
 
+def nueva():
+    ask= int(input("Elige un número"))
+    print(ask**2)
 
+while True:
+    try:
+        nueva()
+        break
+    except ValueError as err:
+            print(err)
+            print("Valor tiene que ser int")
 
 
 # 22. Find all of the numbers from 1-1000 that are divisible by any single digit besides 1 (2-9). 
 # Use results as the name of the list 
 
-
+results = [i for i in range(1,1001) and x for x in range (2,10) if i % x == 0]
+print(results)
 
 
 # 23. Define a customised exception to handle not accepted values. 
