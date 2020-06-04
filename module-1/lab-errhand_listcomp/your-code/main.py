@@ -129,24 +129,29 @@ floats = [float(x) for e in list_of_lists2 for x in e]
 print(floats)
 
 
-
+"""
 #14. Handle the exception thrown by the code below by using try and except blocks. 
 
 
-for i in ['a','b','c']:
-    print i**2
+  for i in ['a','b','c']:
+      print i**2
+ """
 
 
-"""
+
 
 #15. Handle the exception thrown by the code below by using try and except blocks. 
 #Then use a finally block to print 'All Done.'
 # Check in provided resources the type of error you may use. 
 
-x = 5
-y = 0
+try:
+  z = x/y
+except  Exception as e:
+    print(e)
+    print("querida Ras, un número dividido entre 0 es un número tan grande que no lo vas a querer ver, salu2")
+finally:
+  print("All Done")
 
-z = x/y
 
 
 
@@ -158,6 +163,9 @@ abc=[10,20,20]
 print(abc[3])
 
 
+
+
+"""
 #17. Handle at least two kind of different exceptions when dividing a couple of numbers provided by the user. 
 # Hint: take a look on python input function. 
 # Check in provided resources the type of error you may use. 
