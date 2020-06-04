@@ -15,15 +15,16 @@ import math
 
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
 # Remember to use list comprehensions and to print your results
-numbers = range(1, 50)
-square = [ i**2 for i in numbers if i <= 20 ]
+numbers = range(0, 50)
+square = [ i**2 for i in numbers if i < 20 ]
 print(square)
 
 
-"""
 #2. Calculate the first 50 power of two. Use power_of_two as the name of the list.
 # Remember to use list comprehensions and to print your results
 
+power_of_two = [i**2 for i in range(0, 49)]
+print(power_of_two)
 
 
 
@@ -31,15 +32,17 @@ print(square)
 # You will probably need to install math library with pip and import it in this file.  
 # Remember to use list comprehensions and to print your results
 
-
+sqrt = [math.sqrt(i) for i in range(0, 99)]
+print(sqrt)
 
 
 #4. Create this list [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0]. Use my_list as the name of the list.
 # Remember to use list comprehensions and to print your results
 
+my_list = [i for i in range(-10, 1)]
+print(my_list)
 
-
-
+"""
 #5. Find the odd numbers from 1-100. Use odds as the name of the list. 
 # Remember to use list comprehensions and to print your results
 
