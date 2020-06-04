@@ -56,16 +56,16 @@ divisible_by_seven=[i for i in range(0,1001) if i%7 == 0]
 print(divisible_by_seven)
 
 
-"""
+
 #7. Remove all of the vowels in a string. Hint: make a list of the non-vowels. Use non_vowels as the name of the list.
 # Remember to use list comprehensions and to print your results
 # You can use the following test string but feel free to modify at your convenience
 
 teststring = 'Find all of the words in a string that are monosyllabic'
 
+non-vowels=''.join([i for i in teststring if i not in vocales])
 
-
-
+"""
 #8. Find the capital letters (and not white space) in the sentence 'The Quick Brown Fox Jumped Over The Lazy Dog'. 
 # Use capital_letters as the name of the list.  
 # Remember to use list comprehensions and to print your results
