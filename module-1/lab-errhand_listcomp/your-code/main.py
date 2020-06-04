@@ -1,4 +1,4 @@
-"""
+
 #Example: 
 
 eggs = (1,3,8,3,2)
@@ -10,6 +10,8 @@ print(my_listComprehension)
 #Insert here the module/library import statements 
 
 import math
+
+import random
 
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
 # Remember to use list comprehensions and to print your results
@@ -87,24 +89,17 @@ print (consonants)
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
 
-###OJO SIN TERMINAR!!!
-files = 
-print (files)
+### he probado de demasiadas maneras. Una persona tiene que asumir cuando ha perdido. ---OJO REPASO 9 ---
 
 
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
 #You will probably need to import random module
 # Remember to use list comprehensions and to print your results
 
-###OJO sin terminar
+#### Respuesta de David volver a hacer ---ojo REPASO 10---
 import random
-list1 = []
-import random
-randomlist = []
-for i in range(0,10):
-  n = random.randint(0,100)
-  randomlist.append(n)
-
+random_lists = [[random.randrange(1, 100, 1) for _ in range(10)] for _ in range(4)]
+print (random_lists)
 
 
 #12. Flatten the following list of lists. Use flatten_list as the name of the output.
@@ -114,6 +109,7 @@ list_of_lists = [[1,2,3],[4,5,6],[7,8,9]]
 
 flatten_list = [k for e in list_of_lists for k in e]
 print (flatten_list)
+
 
 #13. Convert the numbers of the following nested list to floats. Use floats as the name of the list. 
 # Remember to use list comprehensions and to print your results.
@@ -125,18 +121,24 @@ list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', 
 floats = [float(a) for ds in list_of_lists for a in ds]
 print (floats)
 
-"""
+
 #14. Handle the exception thrown by the code below by using try and except blocks. 
 
+#### No se lo que hay que hacer y no creo que sea esto.
+for i in ['a','b','c']:
+    try: 
+        print(i**2)   
+    except Exception as e:
+        print(e)
+        print ("Esto no rula")
 
- for i in ['a','b','c']:
-    print i**2
 
-"""
+
 #15. Handle the exception thrown by the code below by using try and except blocks. 
 #Then use a finally block to print 'All Done.'
 # Check in provided resources the type of error you may use. 
 
+### vale, asumamos que hoy no duermo.
 x = 5
 y = 0
 
@@ -212,5 +214,3 @@ def linux_interaction():
 Total_Marks = int(input("Enter Total Marks Scored: ")) 
 Num_of_Sections = int(input("Enter Num of Sections: "))
 
-
-"""
