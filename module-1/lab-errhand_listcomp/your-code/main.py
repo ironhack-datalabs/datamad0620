@@ -8,26 +8,25 @@ print(my_listComprehension)
 
 #Insert here the module/library import statements 
 
-
-
+import math
 
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
 # Remember to use list comprehensions and to print your results
 
-
+square = [math.exp(i) for i in range(1,21)] 
 
 
 #2. Calculate the first 50 power of two. Use power_of_two as the name of the list.
 # Remember to use list comprehensions and to print your results
 
-
+power_of_two = [math.pow(i,2) for i in range(1,51)]
 
 
 #3. Calculate the square root of the first 100 numbers. Use sqrt as the name of the list.
 # You will probably need to install math library with pip and import it in this file.  
 # Remember to use list comprehensions and to print your results
 
-
+sqrt = [math.sqrt(i) for i in range(1,101)] 
 
 
 #4. Create this list [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0]. Use my_list as the name of the list.
@@ -189,3 +188,4 @@ Total_Marks = int(input("Enter Total Marks Scored: "))
 Num_of_Sections = int(input("Enter Num of Sections: "))
 
 
+"""
