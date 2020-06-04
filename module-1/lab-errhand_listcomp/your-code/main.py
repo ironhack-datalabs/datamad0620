@@ -60,38 +60,46 @@ print(divisible_by_seven)
 #7. Remove all of the vowels in a string. Hint: make a list of the non-vowels. Use non_vowels as the name of the list.
 # Remember to use list comprehensions and to print your results
 # You can use the following test string but feel free to modify at your convenience
-
+vocales = ["a", "e", "i", "o", "u", "A", "E", "I", "O","U"]
 teststring = 'Find all of the words in a string that are monosyllabic'
 
 non-vowels=''.join([i for i in teststring if i not in vocales])
+print(non_vowels)
 
-"""
 #8. Find the capital letters (and not white space) in the sentence 'The Quick Brown Fox Jumped Over The Lazy Dog'. 
 # Use capital_letters as the name of the list.  
 # Remember to use list comprehensions and to print your results
-
-
-
-
+sentence='The Quick Brown Fox Jumped Over The Lazy Dog'
+import re
+capital_letters= re.sub('[^A-Z]', '', sentence)
+print(capital_letters)
 #9. Find all the consonants in the sentence 'The quick brown fox jumped over the lazy dog'.
 # Use consonants as the name of the list.
 # Remember to use list comprehensions and to print your results.
 
+consonants=''.join([i for i in sentence if i not in vocales])
 
-
-
+print(consonants)
 
 #10. Find the folders you have in your madrid-oct-2018 local repo. Use files as name of the list.  
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
 
+import os
 
+archivos= [i for i in os.listdir("/home/antonio/Documentos/bootcamp/datamad0620")]
+
+print(archivos)
 
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
 #You will probably need to import random module
 # Remember to use list comprehensions and to print your results
 
+import random
 
+random_lists=[[i for i in random.sample(range(100), k=10)] for i in range(4)]
+
+print(random_lists)
 
 
 #12. Flatten the following list of lists. Use flatten_list as the name of the output.
@@ -107,7 +115,9 @@ list_of_lists = [[1,2,3],[4,5,6],[7,8,9]]
 list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', '20'], \
 ['30', '20', '30', '50', '10', '30', '20', '20', '20'], ['100', '100'], ['100', '100', '100', '100', '100'], \
 ['100', '100', '100', '100']]
+floats = [item for sublist in list_of_lists for item in sublist]
 
+print(float)
 
 
 
@@ -115,7 +125,10 @@ list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', 
 
 
 for i in ['a','b','c']:
-    print i**2
+    try:
+        print i**2
+    except Exception as e:
+        print("ERROR:'a','b','c' are strings")
 
 
 #15. Handle the exception thrown by the code below by using try and except blocks. 
@@ -124,8 +137,10 @@ for i in ['a','b','c']:
 
 x = 5
 y = 0
-
-z = x/y
+try:
+    z = x/y
+except Exception as e:
+    print("ERROR:  0 no tiene inverso multiplicativo")
 
 
 
@@ -134,14 +149,25 @@ z = x/y
 # Check in provided resources the type of error you may use. 
 
 abc=[10,20,20]
-print(abc[3])
+try:
+    print(abc[3])
+except Exception as e:
+    print("Error: The index x in print(abc[x]) is out of range")
 
 
 #17. Handle at least two kind of different exceptions when dividing a couple of numbers provided by the user. 
 # Hint: take a look on python input function. 
 # Check in provided resources the type of error you may use. 
 
-
+y= input('Numerador:')
+x= input('Denominador:')
+try:
+    print(y/x)
+except Exception as e:
+    if  x == 0:
+        print('Error: No se puede dividir entre 0')
+    elif y or x != int:
+        print('Error: Los campos deben de ser números')
 
 
 #18. Handle the exception thrown by the code below by using try and except blocks. 
