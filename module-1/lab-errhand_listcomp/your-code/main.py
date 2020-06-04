@@ -2,6 +2,7 @@
 
 eggs = (1,3,8,3,2)
 
+
 my_listComprehension = [1/egg for egg in eggs]
 
 print(my_listComprehension)
@@ -14,37 +15,53 @@ print(my_listComprehension)
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
 # Remember to use list comprehensions and to print your results
 
-
+print("ej 1")
+x=[ i**2 for i in range(21)]
+print(*x)
 
 
 #2. Calculate the first 50 power of two. Use power_of_two as the name of the list.
 # Remember to use list comprehensions and to print your results
 
-
+print("ej 2")
+power_of_two=[ i**2 for i in range(51)]
+print(*power_of_two)
 
 
 #3. Calculate the square root of the first 100 numbers. Use sqrt as the name of the list.
 # You will probably need to install math library with pip and import it in this file.  
 # Remember to use list comprehensions and to print your results
 
+print("ej 3")
+import math
+print (math.pi)
 
+x=[math.sqrt(i) for i in range(101)]
+print(*x)
 
 
 #4. Create this list [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0]. Use my_list as the name of the list.
 # Remember to use list comprehensions and to print your results
 
-
+print("ej 4")
+a=[ i for i in range(-10,1)]
+print(*a)
 
 
 #5. Find the odd numbers from 1-100. Use odds as the name of the list. 
 # Remember to use list comprehensions and to print your results
 
-
+print("ej 5")
+odds=[ i for i in range(1,101,2) ]
+print(*odds)
 
 
 #6. Find all of the numbers from 1-1000 that are divisible by 7. Use divisible_by_seven as the name of the list.
 # Remember to use list comprehensions and to print your results
 
+print("ej 6")
+divisible_by_seven=[i%7==0 for i in range(1,10001)
+print(*divisible_by_seven)
 
 
 
@@ -52,23 +69,26 @@ print(my_listComprehension)
 # Remember to use list comprehensions and to print your results
 # You can use the following test string but feel free to modify at your convenience
 
+print("ej 7")
 teststring = 'Find all of the words in a string that are monosyllabic'
-
-
+vowels=["a","e","i","o","u"]
+non_vowels=[ teststring.remove(i) for i in teststring if i in vowels]
+print(*non_vowels)
 
 
 #8. Find the capital letters (and not white space) in the sentence 'The Quick Brown Fox Jumped Over The Lazy Dog'. 
 # Use capital_letters as the name of the list.  
 # Remember to use list comprehensions and to print your results
 
-
-
-
+print("ej 8")
+teststring=["The Quick Brown Fox Jumped Over The Lazy Dog"]
+capital_letters=[ for i in teststring]
+print(*capital_letters)
 #9. Find all the consonants in the sentence 'The quick brown fox jumped over the lazy dog'.
 # Use consonants as the name of the list.
 # Remember to use list comprehensions and to print your results.
 
-
+print("ej 9")
 
 
 
@@ -76,15 +96,15 @@ teststring = 'Find all of the words in a string that are monosyllabic'
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
 
-
+print("ej 10")
 
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
 #You will probably need to import random module
 # Remember to use list comprehensions and to print your results
 
+print("ej 11")
 
-
-
+"""
 #12. Flatten the following list of lists. Use flatten_list as the name of the output.
 # Remember to use list comprehensions and to print your results
 
@@ -189,3 +209,4 @@ Total_Marks = int(input("Enter Total Marks Scored: "))
 Num_of_Sections = int(input("Enter Num of Sections: "))
 
 
+"""
