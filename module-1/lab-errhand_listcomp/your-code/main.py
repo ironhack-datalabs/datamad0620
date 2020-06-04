@@ -9,35 +9,45 @@ print(my_listComprehension)
 #Insert here the module/library import statements 
 
 
-
-
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
 # Remember to use list comprehensions and to print your results
 
-
+square = [e**2 for e in range(0,21)]
+print(square)
 
 
 #2. Calculate the first 50 power of two. Use power_of_two as the name of the list.
 # Remember to use list comprehensions and to print your results
 
-
+power_of_two = [2**e for e in range(0,51)]
+print(power_of_two)
 
 
 #3. Calculate the square root of the first 100 numbers. Use sqrt as the name of the list.
 # You will probably need to install math library with pip and import it in this file.  
 # Remember to use list comprehensions and to print your results
 
+import math
+
+square_root = [math.sqrt(e) for e in range(0,101)]
+print(square_root)
 
 
 
 #4. Create this list [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0]. Use my_list as the name of the list.
 # Remember to use list comprehensions and to print your results
 
+listilla = [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0]
 
+my_list = [e for e in listilla]
+print(my_list)
 
 
 #5. Find the odd numbers from 1-100. Use odds as the name of the list. 
 # Remember to use list comprehensions and to print your results
+
+odds = [e for e in range(1,101) if e%2!=0]
+print(odds)
 
 
 
@@ -45,6 +55,8 @@ print(my_listComprehension)
 #6. Find all of the numbers from 1-1000 that are divisible by 7. Use divisible_by_seven as the name of the list.
 # Remember to use list comprehensions and to print your results
 
+divisible_by_seven = [e for e in range(1,1001) if e%7==0]
+print(divisible_by_seven)
 
 
 
@@ -53,14 +65,20 @@ print(my_listComprehension)
 # You can use the following test string but feel free to modify at your convenience
 
 teststring = 'Find all of the words in a string that are monosyllabic'
+voca=['a','e','i','o','u'] 
 
-
+non_vowels = [e for e in teststring if e not in voca]
+print(non_vowels)
 
 
 #8. Find the capital letters (and not white space) in the sentence 'The Quick Brown Fox Jumped Over The Lazy Dog'. 
 # Use capital_letters as the name of the list.  
 # Remember to use list comprehensions and to print your results
 
+sentence = 'The Quick Brown Fox Jumped Over The Lazy Dog'
+
+capital_letters = [e for e in sentence if e == e.upper()]
+print(capital_letters)
 
 
 
@@ -68,20 +86,26 @@ teststring = 'Find all of the words in a string that are monosyllabic'
 # Use consonants as the name of the list.
 # Remember to use list comprehensions and to print your results.
 
+sentence_2 = 'The quick brown fox jumped over the lazy dog'
 
+consonants = [e for e in sentence_2 if e not in voca]
+print(consonants)
 
-
-
-#10. Find the folders you have in your madrid-oct-2018 local repo. Use files as name of the list.  
+"""
+#10. Find the folders you have in your datamad0620 local repo. Use files as name of the list.  
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
+"""
 
-
-
+"""
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
 #You will probably need to import random module
 # Remember to use list comprehensions and to print your results
 
+import random
+random_lists = [random.randint(0,100) for e in range(1, 11)]
+print(random_lists)
+"""
 
 
 
@@ -90,15 +114,19 @@ teststring = 'Find all of the words in a string that are monosyllabic'
 
 list_of_lists = [[1,2,3],[4,5,6],[7,8,9]]
 
+flatten_list = [x for e in list_of_lists for x in e]
+print(flatten_list)
 
 
 #13. Convert the numbers of the following nested list to floats. Use floats as the name of the list. 
 # Remember to use list comprehensions and to print your results.
 
-list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', '20'], \
+list_of_lists2 = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', '20'], \
 ['30', '20', '30', '50', '10', '30', '20', '20', '20'], ['100', '100'], ['100', '100', '100', '100', '100'], \
 ['100', '100', '100', '100']]
 
+floats = [float(x) for e in list_of_lists2 for x in e]
+print(floats)
 
 
 
@@ -108,6 +136,8 @@ list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', 
 for i in ['a','b','c']:
     print i**2
 
+
+"""
 
 #15. Handle the exception thrown by the code below by using try and except blocks. 
 #Then use a finally block to print 'All Done.'
@@ -187,5 +217,5 @@ def linux_interaction():
 
 Total_Marks = int(input("Enter Total Marks Scored: ")) 
 Num_of_Sections = int(input("Enter Num of Sections: "))
-
+"""
 
