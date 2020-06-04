@@ -110,7 +110,7 @@ random_lists = [random.sample(range(1, 101), 10) for i in range(4)]
 print(random_lists)
 
 
-"""
+
 #12. Flatten the following list of lists. Use flatten_list as the name of the output.
 # Remember to use list comprehensions and to print your results
 
@@ -119,13 +119,16 @@ flatten_list = [n for i in list_of_lists for n in i]
 
 print(flatten_list)
 
-"""
+
 #13. Convert the numbers of the following nested list to floats. Use floats as the name of the list. 
 # Remember to use list comprehensions and to print your results.
 
 list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', '20'], \
 ['30', '20', '30', '50', '10', '30', '20', '20', '20'], ['100', '100'], ['100', '100', '100', '100', '100'], \
 ['100', '100', '100', '100']]
+
+floats = [float(n) for i in list_of_lists for n in i]
+print(floats)
 
 
 
@@ -134,7 +137,10 @@ list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', 
 
 
 for i in ['a','b','c']:
-    print i**2
+        try:
+            print (i**2)
+        except Exception as e: 
+            print(e)
 
 
 #15. Handle the exception thrown by the code below by using try and except blocks. 
@@ -144,8 +150,13 @@ for i in ['a','b','c']:
 x = 5
 y = 0
 
-z = x/y
-
+try:
+    z = x/y
+    
+except ZeroDivisionError as err:
+    print('Handling run-time error:', err)
+        
+print("All Done")
 
 
 
@@ -153,25 +164,46 @@ z = x/y
 # Check in provided resources the type of error you may use. 
 
 abc=[10,20,20]
-print(abc[3])
+try:
+    print(abc[3])
+except IndexError as err:
+    print(err)
 
 
 #17. Handle at least two kind of different exceptions when dividing a couple of numbers provided by the user. 
 # Hint: take a look on python input function. 
 # Check in provided resources the type of error you may use. 
 
+def division():
+    primero= int(input("Elige un número"))
+    segundo= int(input("Elige otro número"))
+    return (primero/segundo)
+
+while True:
+    try:
+        print(division())
+        break
+    except Exception as e:
+        print(e)
+        print("Solo introducir números")
+    except ZeroDivisionError as err:
+        print(err)
+        print("No se puede dividir entre 0")
 
 
-
+"""
 #18. Handle the exception thrown by the code below by using try and except blocks. 
 # Check in provided resources the type of error you may use. 
 
-f = open('testfile','r')
-f.write('Test write this')
+try:
+    f = open('testfile','r')
+    f.write('Test write this')
+except OSError as e:
+    print ("Directorio no existe")
 
 
 
-
+""" 
 #19. Handle the exceptions that can be thrown by the code below using try and except blocks. 
 #Hint: the file could not exist and the data could not be convertable to int
 
