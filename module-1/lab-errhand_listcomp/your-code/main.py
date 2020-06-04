@@ -182,11 +182,10 @@ try:
     line = f.readline()
     i = int(s.strip())
 except: 
-    if FileNotFoundError:
-        print("Error 1: The file has not been found")
     if ValueError:
-        print("Error 2: Could not convert data to an integer.")
-
+        print("Error 1: Could not convert data to an integer.")
+    if FileNotFoundError:
+        print("Error 2: The file has not been found")
 
 #20. The following function can only run on a Linux system. 
 # The assert in this function will throw an exception if you call it on an operating system other than Linux. 
@@ -205,7 +204,7 @@ except:
 # Bonus Questions:
 
 # You will need to make some research on dictionary comprehension to solve the following questions
-"""
+
 #21.  Write a function that asks for an integer and prints the square of it. 
 # Hint: we need to continually keep checking until we get an integer.
 # Use a while loop with a try,except, else block to account for incorrect inputs.
@@ -213,29 +212,31 @@ except:
 def square():
     n=int(input("Enter the number you want to square:"))
     print (n**2)
-try: 
-    square()
-except: 
-    if TypeError:
-        print("Number must be an integer or float")
+while True: 
+    try: 
         square()
+    except:
+        if TypeError:
+            print("Number must be an integer or float")
     else: 
-        square()
+        break
 
-"""
 
 # 22. Find all of the numbers from 1-1000 that are divisible by any single digit besides 1 (2-9). 
 # Use results as the name of the list 
+results=[n for n in range(1,1001) if [y for y in range(2,10) if n%y==0]]
+print(results)
 
-
-
-
+"""
 # 23. Define a customised exception to handle not accepted values. 
 # You have the following user inputs and the Num_of_sections can not be less than 2.
 # Hint: Create a class derived from the pre-defined Exception class in Python
 
 Total_Marks = int(input("Enter Total Marks Scored: ")) 
 Num_of_Sections = int(input("Enter Num of Sections: "))
+if Num_of_Sections < 2:
+    raise Exception ("Number of Sections must be less than 2")
 
-"""
+
+
 
