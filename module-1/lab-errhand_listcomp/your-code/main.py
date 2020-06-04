@@ -60,8 +60,8 @@ print(*odds)
 # Remember to use list comprehensions and to print your results
 
 print("ej 6")
-divisible_by_seven=[i%7==0 for i in range(1,10001)
-print(*mdivisible_by_seven)
+divisible_by_seven=[i for i in range(0,10001,7)]
+print(divisible_by_seven)
 
 
 
@@ -72,8 +72,8 @@ print(*mdivisible_by_seven)
 print("ej 7")
 teststring = 'Find all of the words in a string that are monosyllabic'
 vowels=["a","e","i","o","u"]
-non_vowels=[ teststring.remove(i) for i in teststring if i in vowels]
-print(*non_vowels)
+non_vowels="".join([ i for i in teststring if i not in vowels])
+print(non_vowels)
 
 
 #8. Find the capital letters (and not white space) in the sentence 'The Quick Brown Fox Jumped Over The Lazy Dog'. 
@@ -82,8 +82,8 @@ print(*non_vowels)
 
 print("ej 8")
 teststring=["The Quick Brown Fox Jumped Over The Lazy Dog"]
-capital_letters=[ i for i in teststring if isupper(i)==True]
-print(*capital_letters)
+capital_letters=[ i for i in teststring if i.istitle()==True]
+print(capital_letters)
 
 
 #9. Find all the consonants in the sentence 'The quick brown fox jumped over the lazy dog'.
@@ -91,19 +91,20 @@ print(*capital_letters)
 # Remember to use list comprehensions and to print your results.
 
 print("ej 9")
-teststring=["The quick brown fox jumped over the lazy dog"]
+teststring= "The quick brown fox jumped over the lazy dog"
 vowels=["a","e","i","o","u"]
-consonants=[ i for i in teststring if i not in vowels]
-print(*consonants)
+consonants="".join([ i for i in teststring if i not in vowels])
+print(consonants)
 
 
 #10. Find the folders you have in your madrid-oct-2018 local repo. Use files as name of the list.  
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
 
+import os
 print("ej 10")
-files=["Intro-python.ipynb LICENSE			README.md		final-project		images			module-1		module-2 module-3"]
-
+files= [folder for folder in os.listdir ("../../../")]
+print(files)
 
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
 #You will probably need to import random module
@@ -111,7 +112,7 @@ files=["Intro-python.ipynb LICENSE			README.md		final-project		images			module-1
 
 print("ej 11")
 import random
-random_lists=[for ]
+random_lists= [random.sample(range(100),k=10) for i in range(4)]
 print(random_lists)
 
 
@@ -119,8 +120,8 @@ print(random_lists)
 # Remember to use list comprehensions and to print your results
 
 list_of_lists = [[1,2,3],[4,5,6],[7,8,9]]
-flatten_list=[list_of_lists]
-print(*flatten_list)
+flatten_list=[ k for e in list_of_lists for k in e ]
+print(flatten_list)
 
 
 #13. Convert the numbers of the following nested list to floats. Use floats as the name of the list. 
@@ -130,61 +131,86 @@ list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', 
 ['30', '20', '30', '50', '10', '30', '20', '20', '20'], ['100', '100'], ['100', '100', '100', '100', '100'], \
 ['100', '100', '100', '100']]
 
-floats=[ i for i in list_of_lists]
-print(*floats)
+floats=[float(k) for e in list_of_lists for k in e]
+print(floats)
 
 #14. Handle the exception thrown by the code below by using try and except blocks. 
 
-
-for i in ['a','b','c']:
-    print (i**2)
+try:
+    for i in ['a','b','c']:
+        print (i**2)
+except Exception as e:
+    print(e)
+    print("Arriba tienes el tipo de error")
 
 
 #15. Handle the exception thrown by the code below by using try and except blocks. 
 #Then use a finally block to print 'All Done.'
 # Check in provided resources the type of error you may use. 
 
-x = 5
-y = 0
+try:
 
-z = x/y
+    x = 5
+    y = 0
 
+    z = x/y
+except Exception as e:
+    print("Tienes un error tipo", e)
+    print("No puedes dividir un número entre 0")
+    print ("All done")
 
 
 
 #16. Handle the exception thrown by the code below by using try and except blocks. 
 # Check in provided resources the type of error you may use. 
 
-abc=[10,20,20]
-print(abc[3])
-
+try:
+    abc=[10,20,20]
+    print(abc[3])
+except Exception as e:
+    print(" Tienes un error tipo",e)
+    print("Por favor, elige un número que esté en la lista abc")
 
 #17. Handle at least two kind of different exceptions when dividing a couple of numbers provided by the user. 
 # Hint: take a look on python input function. 
 # Check in provided resources the type of error you may use. 
 
+try:
+    a=input("Introduce el primer número: ")
+    b=input("Introduce el segundo número: ")
+    c=a/b
+except Exception as e:
+    print("Tienes un error tipo",e)
+    
 
 
 
 #18. Handle the exception thrown by the code below by using try and except blocks. 
 # Check in provided resources the type of error you may use. 
 
-f = open('testfile','r')
-f.write('Test write this')
+try:
+    f = open('testfile','r')
+    f.write('Test write this')
 
+except Exception as e:
+    print("Tienes un error tipo",e)
+    print("Por favor, abre un directorio que esté en tu carpeta")
 
 
 
 #19. Handle the exceptions that can be thrown by the code below using try and except blocks. 
 #Hint: the file could not exist and the data could not be convertable to int
 
-fp = open('myfile.txt')
+try:
+    fp = open('myfile.txt')
     line = f.readline()
     i = int(s.strip())
+except Exception as e:
+    print("Tienes un error tipo",e)
+    print("Por favor, abre un directorio que esté en tu carpeta")
 
 
-
-
+"""
 #20. The following function can only run on a Linux system. 
 # The assert in this function will throw an exception if you call it on an operating system other than Linux. 
 # Handle this exception using try and except blocks. 
@@ -209,7 +235,9 @@ def linux_interaction():
 # 22. Find all of the numbers from 1-1000 that are divisible by any single digit besides 1 (2-9). 
 # Use results as the name of the list 
 
-
+print("ej 22")
+results=[ i for i in range(1,1001) if i%i==0 and not in range(2,10) ]
+print(results)
 
 
 # 23. Define a customised exception to handle not accepted values. 
