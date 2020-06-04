@@ -1,3 +1,4 @@
+"""
 #Example: 
 
 eggs = (1,3,8,3,2)
@@ -5,18 +6,20 @@ eggs = (1,3,8,3,2)
 my_listComprehension = [1/egg for egg in eggs]
 
 print(my_listComprehension)
-
+"""
 #Insert here the module/library import statements 
 
 import math
+import os
+import random
+from random import sample
 
-
-
+"""
 
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
 # Remember to use list comprehensions and to print your results
-numbers = range(0, 50)
-square = [ i**2 for i in numbers if i < 20 ]
+
+square = [ i**2 for i in range(0, 50) if i < 20 ]
 print(square)
 
 
@@ -42,46 +45,59 @@ print(sqrt)
 my_list = [i for i in range(-10, 1)]
 print(my_list)
 
-"""
 #5. Find the odd numbers from 1-100. Use odds as the name of the list. 
 # Remember to use list comprehensions and to print your results
 
+odds = [i for i in range(1, 100) if i%2 != 0]
+print(odds)
 
 
 
 #6. Find all of the numbers from 1-1000 that are divisible by 7. Use divisible_by_seven as the name of the list.
 # Remember to use list comprehensions and to print your results
 
-
-
+divisible_by_seven =[i for i in range(1,1000) if i % 7 == 0] 
+print(divisible_by_seven)
 
 #7. Remove all of the vowels in a string. Hint: make a list of the non-vowels. Use non_vowels as the name of the list.
 # Remember to use list comprehensions and to print your results
 # You can use the following test string but feel free to modify at your convenience
 
+vowels = ["a", "e", "i", "o", "u"]
 teststring = 'Find all of the words in a string that are monosyllabic'
-
-
+non_vowels ="".join([i for i in teststring if i not in vowels])
+print(non_vowels)
 
 
 #8. Find the capital letters (and not white space) in the sentence 'The Quick Brown Fox Jumped Over The Lazy Dog'. 
 # Use capital_letters as the name of the list.  
 # Remember to use list comprehensions and to print your results
-
+sentence= 'The Quick Brown Fox Jumped Over The Lazy Dog'
+capital_letters = [i for i in sentence if i.istitle()]
+print(capital_letters)
 
 
 
 #9. Find all the consonants in the sentence 'The quick brown fox jumped over the lazy dog'.
 # Use consonants as the name of the list.
 # Remember to use list comprehensions and to print your results.
-
-
-
+vowels = ["a", "e", "i", "o", "u"]
+sentence2 = 'The quick brown fox jumped over the lazy dog'
+consonants = [i for i in sentence2 if i not in vowels]
+print(consonants)
 
 
 #10. Find the folders you have in your madrid-oct-2018 local repo. Use files as name of the list.  
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
+
+files = [folder for folder in os.listdir("../../../")] 
+print(files)
+
+
+# Path relativo a la carpeta data... --> se refieren a la misma carpeta, este indica el lugar que ocupa, es una dirección
+#relativa, no importa desde donde se llame, llega al mismo punto
+
 
 
 
@@ -90,12 +106,16 @@ teststring = 'Find all of the words in a string that are monosyllabic'
 # Remember to use list comprehensions and to print your results
 
 
+random_lists = [[random.randrange(1, 100, 1) for _ in range(10)] for _ in range(4)]
+print (random_lists)
 
 
 #12. Flatten the following list of lists. Use flatten_list as the name of the output.
 # Remember to use list comprehensions and to print your results
 
 list_of_lists = [[1,2,3],[4,5,6],[7,8,9]]
+flatten_list = [i for x in list_of_lists for i in  x]
+print(flatten_list)
 
 
 
@@ -106,16 +126,19 @@ list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', 
 ['30', '20', '30', '50', '10', '30', '20', '20', '20'], ['100', '100'], ['100', '100', '100', '100', '100'], \
 ['100', '100', '100', '100']]
 
+floats = [float(i) for x in list_of_lists for i in x]
+print(floats)
 
 
 
+"""
 #14. Handle the exception thrown by the code below by using try and except blocks. 
 
 
 for i in ['a','b','c']:
     print i**2
 
-
+"""
 #15. Handle the exception thrown by the code below by using try and except blocks. 
 #Then use a finally block to print 'All Done.'
 # Check in provided resources the type of error you may use. 
