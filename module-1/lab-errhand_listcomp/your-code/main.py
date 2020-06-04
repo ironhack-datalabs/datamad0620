@@ -225,7 +225,7 @@ print(linux_interaction())
     
 
 
-"""
+
 # Bonus Questions:
 
 # You will need to make some research on dictionary comprehension to solve the following questions
@@ -234,6 +234,24 @@ print(linux_interaction())
 # Hint: we need to continually keep checking until we get an integer.
 # Use a while loop with a try,except, else block to account for incorrect inputs.
 
+# CUIDADO QUE PETA! Intentando seguir el ejemplo de Marc, a mí no me coge la función que he definido... me la pone underlined, y, además me mete en un bucle sin fin... 
+#Si pudiésemos comentarlo en clase sería genial.
+
+def cuadrado(x):
+    
+    return(int(x**2))
+print(cuadrado(16))
+   
+
+while True:
+    try:
+        d = cuadrado()
+        break
+    except Exception as e:
+        print(e)
+        print("Introduce un número entero")
+   
+
 
 
 
@@ -241,11 +259,20 @@ print(linux_interaction())
 # Use results as the name of the list 
 
 
+divisibles = []
+for i in range(1,1000):
+    for n in range(2,9):
+        if i%n==0:
+            divisibles.append(i)
+print(divisibles)
 
-
+results = [i for n in range(2,9) for i in range(1, 1000) if i%n == 0]
+print(results)
+"""
 # 23. Define a customised exception to handle not accepted values. 
 # You have the following user inputs and the Num_of_sections can not be less than 2.
 # Hint: Create a class derived from the pre-defined Exception class in Python
 
 Total_Marks = int(input("Enter Total Marks Scored: ")) 
-Num_of_Sections = int(input("Enter Num of Sections: "))"""
+Num_of_Sections = int(input("Enter Num of Sections: ")) 
+
