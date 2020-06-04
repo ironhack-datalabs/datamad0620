@@ -1,3 +1,4 @@
+"""
 #Example: 
 
 eggs = (1,3,8,3,2)
@@ -10,10 +11,16 @@ print(my_listComprehension)
 
 
 
-
+"""
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
 # Remember to use list comprehensions and to print your results
 
+square =range(21)
+
+[print (i**2) for i in square]    
+
+
+"""
 
 
 
@@ -105,7 +112,7 @@ list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', 
 #14. Handle the exception thrown by the code below by using try and except blocks. 
 
 
-for i in ['a','b','c']:
+ for i in ['a','b','c']:
     print i**2
 
 
@@ -189,3 +196,4 @@ Total_Marks = int(input("Enter Total Marks Scored: "))
 Num_of_Sections = int(input("Enter Num of Sections: "))
 
 
+"""
