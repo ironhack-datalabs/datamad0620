@@ -50,48 +50,60 @@ print (my_list)
 odd = [x for x in range (101)if x%2 != 0]
 print (odd)
 
-"""
 #6. Find all of the numbers from 1-1000 that are divisible by 7. Use divisible_by_seven as the name of the list.
 # Remember to use list comprehensions and to print your results
 
 divisible_by_seven = [x for x in range(101) if x%7 ==0]
 print (divisible_by_seven)
 
-"""
+
 #7. Remove all of the vowels in a string. Hint: make a list of the non-vowels. Use non_vowels as the name of the list.
 # Remember to use list comprehensions and to print your results
 # You can use the following test string but feel free to modify at your convenience
-
 teststring = 'Find all of the words in a string that are monosyllabic'
 
 
+non_vowels = [x for x in teststring if x not in [*"aeiou "]
+print (non_vowels)
 
 
 #8. Find the capital letters (and not white space) in the sentence 'The Quick Brown Fox Jumped Over The Lazy Dog'. 
 # Use capital_letters as the name of the list.  
 # Remember to use list comprehensions and to print your results
 
-
+capital_letters =  [x for x in [*"The Quick Brown Fox Jumped Over The Lazy Dog"] if x.isupper()]
+print(capital_letters)
 
 
 #9. Find all the consonants in the sentence 'The quick brown fox jumped over the lazy dog'.
 # Use consonants as the name of the list.
 # Remember to use list comprehensions and to print your results.
 
-
-
+consonants = [x for x in [*"The Quick Brown Fox Jumped Over The Lazy Dog"] if x not in [*"aeiou "]]
+print (consonants)
 
 
 #10. Find the folders you have in your madrid-oct-2018 ((((NUESTRO REPO)))) local repo. Use files as name of the list.  
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
 
+###OJO SIN TERMINAR!!!
+files = 
+print (files)
 
 
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
 #You will probably need to import random module
 # Remember to use list comprehensions and to print your results
 
+###OJO sin terminar
+import random
+list1 = []
+import random
+randomlist = []
+for i in range(0,10):
+  n = random.randint(0,100)
+  randomlist.append(n)
 
 
 
@@ -100,7 +112,8 @@ teststring = 'Find all of the words in a string that are monosyllabic'
 
 list_of_lists = [[1,2,3],[4,5,6],[7,8,9]]
 
-
+flatten_list = [k for e in list_of_lists for k in e]
+print (flatten_list)
 
 #13. Convert the numbers of the following nested list to floats. Use floats as the name of the list. 
 # Remember to use list comprehensions and to print your results.
@@ -109,16 +122,17 @@ list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', 
 ['30', '20', '30', '50', '10', '30', '20', '20', '20'], ['100', '100'], ['100', '100', '100', '100', '100'], \
 ['100', '100', '100', '100']]
 
+floats = [float(a) for ds in list_of_lists for a in ds]
+print (floats)
 
-
-
+"""
 #14. Handle the exception thrown by the code below by using try and except blocks. 
 
 
  for i in ['a','b','c']:
     print i**2
 
-
+"""
 #15. Handle the exception thrown by the code below by using try and except blocks. 
 #Then use a finally block to print 'All Done.'
 # Check in provided resources the type of error you may use. 
