@@ -97,16 +97,15 @@ print(consonants)
 # Remember to use list comprehensions and to print your results.
 """
 
-"""
+
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
 #You will probably need to import random module
 # Remember to use list comprehensions and to print your results
 
 import random
 random_lists = [random.randint(0,100) for e in range(1, 11)]
+random_lists = [random_list for i in range (1,5)]
 print(random_lists)
-"""
-
 
 
 #12. Flatten the following list of lists. Use flatten_list as the name of the output.
@@ -144,6 +143,8 @@ print(floats)
 #Then use a finally block to print 'All Done.'
 # Check in provided resources the type of error you may use. 
 
+x = 5
+y = 0
 try:
   z = x/y
 except  Exception as e:
@@ -154,14 +155,16 @@ finally:
 
 
 
-
-
 #16. Handle the exception thrown by the code below by using try and except blocks. 
 # Check in provided resources the type of error you may use. 
 
 abc=[10,20,20]
-print(abc[3])
 
+try:
+    print(abc[3])
+except Exception as e:
+    print(e)
+    print("No hay posición tres en tu lista(solo hay 0, 1 y 2)")
 
 
 
@@ -170,15 +173,27 @@ print(abc[3])
 # Hint: take a look on python input function. 
 # Check in provided resources the type of error you may use. 
 
+var1 = input("Edad: ")
+var2 = input("Edad de tu perro: ")
 
+try:
+  var1/var2
 
+except Exception as e:
+    print(e)
+    print("No puedes dividir strings, si puedes dividir integers o floats por ejemplo")
+
+"""
 
 #18. Handle the exception thrown by the code below by using try and except blocks. 
 # Check in provided resources the type of error you may use. 
 
-f = open('testfile','r')
-f.write('Test write this')
-
+try:
+  f = open('testfile','r')
+  f.write('Test write this')
+except Exception as e:
+  print(e)
+  print("No has creado previamente la carpeta testfile")
 
 
 
@@ -192,6 +207,8 @@ fp = open('myfile.txt')
 
 
 
+
+"""
 #20. The following function can only run on a Linux system. 
 # The assert in this function will throw an exception if you call it on an operating system other than Linux. 
 # Handle this exception using try and except blocks. 
