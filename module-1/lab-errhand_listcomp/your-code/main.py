@@ -1,4 +1,4 @@
-"""
+
 #Example: 
 
 eggs = (1,3,8,3,2)
@@ -268,11 +268,17 @@ print(divisibles)
 
 results = [i for n in range(2,9) for i in range(1, 1000) if i%n == 0]
 print(results)
-"""
+
 # 23. Define a customised exception to handle not accepted values. 
 # You have the following user inputs and the Num_of_sections can not be less than 2.
 # Hint: Create a class derived from the pre-defined Exception class in Python
 
 Total_Marks = int(input("Enter Total Marks Scored: ")) 
 Num_of_Sections = int(input("Enter Num of Sections: ")) 
+
+def customized():
+    if Num_of_Sections < 2:
+        raise Exception ("The number os sections must be bigger than two")
+    return "My head is gonna blow"
+print(customized())
 
