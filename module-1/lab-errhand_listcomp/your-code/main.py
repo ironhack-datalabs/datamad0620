@@ -6,7 +6,7 @@ eggs = (1,3,8,3,2)
 my_listComprehension = [1/egg for egg in eggs]
 
 print(my_listComprehension)
-"""
+
 #Insert here the module/library import statements 
 
 import math
@@ -15,7 +15,7 @@ import random
 from random import sample
 import sys 
 
-"""
+
 
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
 # Remember to use list comprehensions and to print your results
