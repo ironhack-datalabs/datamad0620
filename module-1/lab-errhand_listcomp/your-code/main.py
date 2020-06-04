@@ -1,31 +1,42 @@
+"""
 #Example: 
 
 eggs = (1,3,8,3,2)
 
-my_listComprehension = [1/egg for egg in eggs]
+my_listComprehension = [1/i for i in eggs]
 
 print(my_listComprehension)
 
+
 #Insert here the module/library import statements 
 
-
+import math
 
 
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
 # Remember to use list comprehensions and to print your results
 
+square_number=[math.sqrt(i+1) for i in range (20)]
+print(square_number)
+print(len(square_number))
 
 
 
 #2. Calculate the first 50 power of two. Use power_of_two as the name of the list.
 # Remember to use list comprehensions and to print your results
 
+first_power_of_two=[(2**i) for i in range (50)]
 
+print(first_power_of_two)
 
 
 #3. Calculate the square root of the first 100 numbers. Use sqrt as the name of the list.
 # You will probably need to install math library with pip and import it in this file.  
 # Remember to use list comprehensions and to print your results
+import math
+sqrt=[math.sqrt(i)for i in range(100)]
+
+print(sqrt)
 
 
 
@@ -33,19 +44,20 @@ print(my_listComprehension)
 #4. Create this list [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0]. Use my_list as the name of the list.
 # Remember to use list comprehensions and to print your results
 
-
-
+my_list=[(i*-1) for i in range(11)]
+print(my_list)
 
 #5. Find the odd numbers from 1-100. Use odds as the name of the list. 
 # Remember to use list comprehensions and to print your results
 
-
-
+odds=[i for i in range(100) if i%2!=0]
+print(odds)
 
 #6. Find all of the numbers from 1-1000 that are divisible by 7. Use divisible_by_seven as the name of the list.
 # Remember to use list comprehensions and to print your results
 
-
+divisible_by_seven=[i for i in range(1000) if i%7==0]
+print(divisible_by_seven)
 
 
 #7. Remove all of the vowels in a string. Hint: make a list of the non-vowels. Use non_vowels as the name of the list.
@@ -53,13 +65,19 @@ print(my_listComprehension)
 # You can use the following test string but feel free to modify at your convenience
 
 teststring = 'Find all of the words in a string that are monosyllabic'
+vowels="aeiou"
 
-
-
+non_vowels=[i for i in teststring if i not in vowels]
+print(non_vowels)
 
 #8. Find the capital letters (and not white space) in the sentence 'The Quick Brown Fox Jumped Over The Lazy Dog'. 
 # Use capital_letters as the name of the list.  
 # Remember to use list comprehensions and to print your results
+
+sentence='The Quick Brown Fox Jumped Over The Lazy Dog'
+
+capital_letters=[i for i in sentence if i.isupper()]
+print(capital_letters)
 
 
 
@@ -68,6 +86,10 @@ teststring = 'Find all of the words in a string that are monosyllabic'
 # Use consonants as the name of the list.
 # Remember to use list comprehensions and to print your results.
 
+sentence='The Quick Brown Fox Jumped Over The Lazy Dog'
+vowels="aeiou"
+consonants=[i for i in sentence if i not in vowels]
+print(consonants)
 
 
 
@@ -75,6 +97,10 @@ teststring = 'Find all of the words in a string that are monosyllabic'
 #10. Find the folders you have in your madrid-oct-2018 local repo. Use files as name of the list.  
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
+import os
+
+files=os.listdir("/Users/antonioortiz/Documents/Ironhack/datamad0620/")
+print(files)
 
 
 
@@ -82,6 +108,18 @@ teststring = 'Find all of the words in a string that are monosyllabic'
 #You will probably need to import random module
 # Remember to use list comprehensions and to print your results
 
+import random
+
+#random_list=[i for i in random.sample(range(0, 100), 10)]
+#no se me ocurre como hacerlo sin random.sample, me he partido la cabeza aqui casi 1h hasta que he encontrado esta function.:)
+
+#random_list=[[i for i in range(4) ]for i in random.sample(range(0, 100), 10)]
+#print(random_list)
+
+random_list=[[i for i in random.sample(range(0, 100), 4) ] for i in range(4)]
+print(random_list)
+
+#conseguido!!
 
 
 
@@ -89,6 +127,9 @@ teststring = 'Find all of the words in a string that are monosyllabic'
 # Remember to use list comprehensions and to print your results
 
 list_of_lists = [[1,2,3],[4,5,6],[7,8,9]]
+
+flatten_list=[e for i in list_of_lists for e in i ]
+print(flatten_list)
 
 
 
@@ -100,13 +141,25 @@ list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', 
 ['100', '100', '100', '100']]
 
 
+floats1=[float(e)for i in list_of_lists for e in i]
+
+floats=[*i for i in list_of_lists]
+print(floats)
+#last try... no consigo replicar la lista sin aplanarla...
+
+
+
 
 
 #14. Handle the exception thrown by the code below by using try and except blocks. 
 
 
 for i in ['a','b','c']:
-    print i**2
+    try:
+        print (i**2)
+    except:
+        print("No se puede multiplicar una letra")
+
 
 
 #15. Handle the exception thrown by the code below by using try and except blocks. 
@@ -115,8 +168,12 @@ for i in ['a','b','c']:
 
 x = 5
 y = 0
-
-z = x/y
+try:
+    z = x/y
+except:
+    print("infinito")
+finally:
+    print("all done")
 
 
 
@@ -125,16 +182,34 @@ z = x/y
 # Check in provided resources the type of error you may use. 
 
 abc=[10,20,20]
-print(abc[3])
+
+try:
+    print(abc[3])
+except:
+    print("El indice esta fuera de lugar")
 
 
+"""
 #17. Handle at least two kind of different exceptions when dividing a couple of numbers provided by the user. 
 # Hint: take a look on python input function. 
 # Check in provided resources the type of error you may use. 
 
+number1=0
+number2=2
+
+
+number1=int(input("introcude un numero: "))
+number2=int(input("introcude un numero: "))
+
+try:
+    print(number1/number2)
+except (ZeroDivisionError ,ValueError):
+    print("indicate a number greater than 0. You cannot write a letter")
 
 
 
+
+"""
 #18. Handle the exception thrown by the code below by using try and except blocks. 
 # Check in provided resources the type of error you may use. 
 
@@ -189,3 +264,4 @@ Total_Marks = int(input("Enter Total Marks Scored: "))
 Num_of_Sections = int(input("Enter Num of Sections: "))
 
 
+"""
