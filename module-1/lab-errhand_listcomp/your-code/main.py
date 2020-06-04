@@ -91,11 +91,13 @@ sentence_2 = 'The quick brown fox jumped over the lazy dog'
 consonants = [e for e in sentence_2 if e not in voca]
 print(consonants)
 
-"""
+
 #10. Find the folders you have in your datamad0620 local repo. Use files as name of the list.  
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
-"""
+
+files = [folder for folder in datamad0620]
+print(files)
 
 
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
@@ -127,17 +129,16 @@ list_of_lists2 = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30',
 floats = [float(x) for e in list_of_lists2 for x in e]
 print(floats)
 
-
 """
 #14. Handle the exception thrown by the code below by using try and except blocks. 
 
 
-  for i in ['a','b','c']:
-      print i**2
- 
-
-
-
+for i in ['a','b','c']:
+    try:
+        print i**2
+    except Exception as e:
+        print("faltan los ()")
+"""
 
 #15. Handle the exception thrown by the code below by using try and except blocks. 
 #Then use a finally block to print 'All Done.'
@@ -177,11 +178,12 @@ var1 = input("Edad: ")
 var2 = input("Edad de tu perro: ")
 
 try:
-  var1/var2
+  print(var1/var2)
 
-except Exception as e:
-    print(e)
+except (ZeroDivisionError, TypeError):
+    print("No puedes dividir entre 0")
     print("No puedes dividir strings, si puedes dividir integers o floats por ejemplo")
+
 
 
 
@@ -215,13 +217,15 @@ except Exception as e:
 # You will probably need to import sys 
 
 def linux_interaction():
-    assert ('linux' in sys.platform), "Function can only run on Linux systems."
-    print('Doing something.')
-"""
+  try:
+      assert ('linux' in sys.platform), "Function can only run on Linux systems."
+      print('Doing something.')
+  except Exception as e:
+    print(e)
 
 
 
-"""
+
 
 # Bonus Questions:
 
@@ -231,15 +235,27 @@ def linux_interaction():
 # Hint: we need to continually keep checking until we get an integer.
 # Use a while loop with a try,except, else block to account for incorrect inputs.
 
+def squarie(x):
+  return(int(x**2))
+  n = input("What number do you want the square of?")
 
+  while True:
+    try:
+        sq = squarie()
+        break
+    except Exception as e:
+        print(e)
+        print("No estás introduciendo un número (llamado int en python)")
+print(sq)
 
 
 # 22. Find all of the numbers from 1-1000 that are divisible by any single digit besides 1 (2-9). 
 # Use results as the name of the list 
 
+div_29 = [e for e in range(1,1001) for i in listilla2 if e%i==0]
+print(div_29)
 
-
-
+"""
 # 23. Define a customised exception to handle not accepted values. 
 # You have the following user inputs and the Num_of_sections can not be less than 2.
 # Hint: Create a class derived from the pre-defined Exception class in Python
