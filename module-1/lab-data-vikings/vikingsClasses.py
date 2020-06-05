@@ -43,8 +43,18 @@ class Viking(Soldier):
 # Saxon
 
 
-class Saxon:
-    pass
+class Saxon(Soldier):
+    def receiveDamage(self,damage):
+        if (self.health - damage)<=0:
+            return "A Saxon has died in combat"
+        if (self.health - damage)<0:
+            return "A Saxon has received {damage} points of damage"
+            pass
+
+
+
+
+    
 
 # War
 
