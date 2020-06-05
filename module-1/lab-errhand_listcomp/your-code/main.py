@@ -1,4 +1,4 @@
-
+"""
 
 #Example:: 
 
@@ -15,7 +15,7 @@ import os
 from math import sqrt
 import sys
 
-
+"""
 
 
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
@@ -79,9 +79,9 @@ print(non_vowels)
 # Use capital_letters as the name of the list.  
 # Remember to use list comprehensions and to print your results
 
-sentence="The Quick Brown Fox Jumped Over The Lazy Dog"
+frase="The Quick Brown Fox Jumped Over The Lazy Dog"
 
-capital_letters=[ n for n in sentence if n.isupper()]
+capital_letters=[ n for n in frase if n.isupper()]
 
 print(capital_letters)
 
@@ -153,7 +153,7 @@ try:
     z = x/y
     print(z)
 except ZeroDivisionError:
-    print ("eh!no puedes dividir x 0") 
+    print ("eh!no puedes dividir por 0") 
 finally:
     print('Todo hecho')
 
@@ -205,6 +205,8 @@ except (FileNotFoundError):
 def linux_interaction():
     assert ('linux' in sys.platform), "Function can only run on Linux systems."
     print('Doing something.')
+
+    #BONUS --->>> ¡Espero retomar esto !
 
 # You will need to make some research on dictionary comprehension to solve the following questions
 
@@ -263,7 +265,7 @@ except (FileNotFoundError):
 def linux_interaction():
     assert ('linux' in sys.platform), "Function can only run on Linux systems."
     print('Doing something.')
-
+"""
 
 # Bonus Questions:
 
@@ -290,3 +292,4 @@ Total_Marks = int(input("Enter Total Marks Scored: "))
 Num_of_Sections = int(input("Enter Num of Sections: "))
 
 
+"""
