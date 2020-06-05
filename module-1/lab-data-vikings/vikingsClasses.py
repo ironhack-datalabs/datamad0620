@@ -16,16 +16,11 @@ class Soldier:
 
 # Viking
 
-class Viking:
+class Viking(Soldier):
     def __init__(self, name, health, strength):
+        super().__init__(health, strength)
         self.name = name
-        self.health = health
-        self.strength = strength
-    
-    def attack(self):
-        return self.strength
-        
-
+  
     def receiveDamage(self, thedamage):
         self.health =  self.health - thedamage
         if self.health > thedamage:
