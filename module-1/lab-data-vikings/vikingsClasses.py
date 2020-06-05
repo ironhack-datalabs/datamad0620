@@ -12,7 +12,6 @@ class Soldier:
      def receiveDamage(self, damage):
          self.health -= damage
 
-
 # Viking
 
 
@@ -26,23 +25,30 @@ class Viking(Soldier):
          self.health -= damage
          if self.health > 0:
              return f"{self.name} has received {damage} points of damage"
-             f"Hello {nombre}!"
          else: 
              return f"{self.name} has died in act of combat"
     
     def battleCry(self):
         return "Odin Owns You All!"
 
-    
 
-
-
-"""
 # Saxon
 
+class Saxon(Soldier):
+    def __init__(self, health, strength):
+        super().__init__(health, strength)
 
-class Saxon:
-    pass
+    def receiveDamage(self, damage):
+         super().receiveDamage
+         self.health -= damage
+         if self.health > 0:
+             return f"A Saxon has received {damage} points of damage"
+         else: 
+             return "A Saxon has died in combat"
+    
+
+"""
+
 
 # War
 
