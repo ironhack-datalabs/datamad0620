@@ -45,6 +45,7 @@ class Saxon(Soldier):
             return f"A Saxon has received {thedamage} points of damage"
         if self.health < thedamage:
             return f"A Saxon has died in combat"
+        
 
 
 
