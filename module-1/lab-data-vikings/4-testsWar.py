@@ -41,7 +41,7 @@ class TestWar2(unittest.TestCase):
 
     def testAddViking(self):
         self.assertEqual(callable(self.war.addViking), True)
-"""
+
     def testAddVikingShouldReceiveOneParam(self):
         self.assertEqual(len(signature(self.war.addViking).parameters), 1)
 
@@ -124,7 +124,7 @@ class TestWar2(unittest.TestCase):
     def testShouldReturnStringStillFighting(self):
         self.assertEqual(
             self.war.showStatus(), 'Vikings and Saxons are still in the thick of battle.')
-"""
+
 
 if __name__ == '__main__':
     unittest.main()
