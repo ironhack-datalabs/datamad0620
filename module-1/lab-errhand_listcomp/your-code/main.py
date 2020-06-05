@@ -129,6 +129,9 @@ list_of_lists2 = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30',
 floats = [float(x) for e in list_of_lists2 for x in e]
 print(floats)
 
+[[float(e) for e in l] for l in list_of_lists2]
+##marc
+
 """
 #14. Handle the exception thrown by the code below by using try and except blocks. 
 
