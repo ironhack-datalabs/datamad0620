@@ -23,9 +23,9 @@ class Viking(Soldier):
   
     def receiveDamage(self, thedamage):
         self.health =  self.health - thedamage
-        if self.health > thedamage:
+        if self.health > 0:
             return f"{self.name} has received {thedamage} points of damage"
-        if self.health < thedamage:
+        if self.health <= 0:
             return f"{self.name} has died in act of combat"
 
     def battleCry(self):
@@ -41,9 +41,9 @@ class Saxon(Soldier):
     
     def receiveDamage(self, thedamage):
         self.health =  self.health - thedamage
-        if self.health > thedamage:
+        if self.health > 0:
             return f"A Saxon has received {thedamage} points of damage"
-        if self.health < thedamage:
+        if self.health <= 0:
             return f"A Saxon has died in combat"
         
 
