@@ -69,18 +69,23 @@ class War():
         sax = random.choice(self.saxonArmy)
         vik = random.choice(self.vikingArmy)
         result = sax.receiveDamage(vik.attack())
-        if result == "A Saxon has died in combat":
+        if sax.health <= 0:
             self.saxonArmy.remove(sax)
         return result
-
-        
-        
-
-
-
-
-
+          
     def saxonAttack(self):
-        pass
+        sax = random.choice(self.saxonArmy)
+        vik =random.choice(self.vikingArmy)
+        result = vik.receiveDamage(sax.attack())
+        if vik.health <= 0:
+            self.vikingArmy.remove(vik)
+        return result
+
     def showStatus(self):
-        pass
+        if len(self.saxonArmy) == 0:
+            return "Vikings have won the war of the century!"
+        elif len(self.vikingArmy) == 0:
+            return "Saxons have fought for their lives and survive another day..."
+        elif len(self.vikingArmy) >0 and len(self.saxonArmy) > 0:
+            return "Vikings and Saxons are still in the thick of battle."
+
