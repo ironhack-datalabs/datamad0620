@@ -1,4 +1,6 @@
 
+import random
+
 # Soldier
 
 class Soldier:
@@ -45,14 +47,24 @@ class Saxon(Soldier):
              return f"A Saxon has received {damage} points of damage"
          else: 
              return "A Saxon has died in combat"
-    
-
-"""
 
 
 # War
 
 
 class War:
-    pass
-"""
+    def __init__(self):
+        super()
+    self.vikingArmy = []
+    self.saxonArmy = []
+
+    def addViking(self, Viking):
+    self.vikingArmy += 1
+
+    def addSaxon(self, Saxon):
+    saxonArmy += 1
+
+    def vikingAttack(self, randomSaxon, :
+        random.random(Saxon)
+
+
