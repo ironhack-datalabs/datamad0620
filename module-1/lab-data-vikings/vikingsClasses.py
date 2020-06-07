@@ -91,13 +91,12 @@ class War:
             self.vikingArmy.remove(Viking1)
         return f"{Viking1.name} has received {Saxon1.strength} points of damage"
 
-    def showStatus():
+    def showStatus(self):
         if (len(self.vikingArmy) > 0 and len(self.saxonArmy) == 0):
             return "Vikings have won the war of the century!"
         
         elif (len(self.vikingArmy) == 0 and len(self.saxonArmy) > 0):
-            return "Saxons have fought for their lives and survive another day..."    
-             
+            return "Saxons have fought for their lives and survive another day..."     
         elif (len(self.vikingArmy) > 0 and len(self.saxonArmy) > 0):
             return "Vikings and Saxons are still in the thick of battle."
     
