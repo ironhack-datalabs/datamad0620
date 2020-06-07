@@ -106,17 +106,20 @@ class War:
 
                 self.vikingArmy.pop()
                 return attack
-
+                
     def showStatus(self):
-
-        if self.vikingArmy == 0:
+        
+        if len(self.vikingArmy) == 0:
 
             return f"Saxons have fought for their lives and survive another day..."
-            return f"Saxons won"
-        if self.saxonArmy == 0:
+            
+        if len(self.saxonArmy) == 0:
 
-            return f"vive another day..."
-            return f"Vikings won"
+            return f"Vikings have won the war of the century!"
+
+        else:
+            
+            return "Vikings and Saxons are still in the thick of battle."
         
 
             
