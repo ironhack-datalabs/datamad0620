@@ -2,7 +2,7 @@
 # Soldier
 
 
-class Soldier:
+class Soldier():
     def __init__(self,health,strength):
         self.health= health
         self.strength=strength
@@ -32,18 +32,35 @@ class Viking(Soldier):
 
     def battleCry(self):
         return "Odin Owns You all!"
-
-"""
+            
 
 # Saxon
 
 
-class Saxon:
-    pass
+class Saxon(Soldier):
 
+    def __init__(self, name, health, strength):                #¿Este def init si no lo pongo sigue funcionando?
+         super().__init__(health,strength)
+         
+    def receiveDamage(self, damage):
+        self.health=self.health - damage
+
+        if self.health <=0:
+            return f"Saxon has reveived {damage} points of damage" 
+        else:
+            return f"Saxon has died in combat"
 # War
 
 
 class War:
-    pass
-"""
+    def __init__(self):
+        self.vikingArmy=[]
+        self.saxonArmy=[]
+    def addViking(self, viking):
+        self.vikingArmy.append(viking)
+    def addSaxon(self,Saxon)
+
+
+
+
+    
