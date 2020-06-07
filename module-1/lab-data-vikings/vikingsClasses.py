@@ -23,9 +23,9 @@ class Viking(Soldier):
         def receiveDamage(self,damage):
             return self.health-=damage
         if self.health > 0:
-            print(f"self.name"{" has received DAMAGE points of damage"})
+            print(f"(self.name){" has received DAMAGE points of damage"})
         else:
-            print(f"(self.name"{"has died in act of combat"})
+            print(f"(self.name){"has died in act of combat"})
         def battleCry():
             return "Odin Owns You All!"
 
@@ -45,8 +45,6 @@ class Saxon(Soldier):
         else:
             print("A Saxon has died in combat")
 # War
-
-
 class War:
     def __Init__(self,):  
         vikingArmy=[]
