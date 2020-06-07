@@ -1,7 +1,7 @@
 
 # Soldier
 class Soldier:
-    def __Init__(self, name, health, strengh):
+    def __init__(self, name, health, strengh):
         self.name = name
         self.health = health
         self.strengh = strengh
@@ -14,8 +14,8 @@ class Soldier:
 
 # Viking
 class Viking(Soldier):
-    def __Init__(self, name, health, strengh):
-        super().__Init__(self, health, strengh):
+    def __init__(self, name, health, strengh):
+        super().__init__(self, health, strengh):
                 self.health = health
                 self.strengh = strengh
         def attack():
@@ -32,7 +32,7 @@ class Viking(Soldier):
 
 # Saxon
 class Saxon(Soldier):
-    def __Init__(self, name, health, strengh):
+    def __init__(self, name, health, strengh):
         super().__Init__(self,health,strengh):
                 self.health=health
                 self.strengh=strengh
@@ -46,7 +46,7 @@ class Saxon(Soldier):
             print("A Saxon has died in combat")
 # War
 class War:
-    def __Init__(self,):  
+    def __init__(self,):  
         vikingArmy=[]
         saxonArmy=[]
     def addViking(self,Viking):
