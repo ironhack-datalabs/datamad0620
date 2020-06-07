@@ -65,6 +65,84 @@ class Saxon(Soldier):
 
 # War
 
+import random
 
 class War:
+    def __init__(self):
+        self.vikingArmy=[]
+        self.saxonArmy=[]
+    
+    def addViking(self,Viking):
+        
+        self.vikingArmy.append(Viking)
+
+    def addSaxon(self,Saxon):
+        self.saxonArmy.append(Saxon)
+
+    def vikingAttack(self):
+
+        saxon=random.choice(self.saxonArmy)
+        viking=random.choice(self.vikingArmy)
+
+        attack = saxon.receiveDamage(viking.attack())
+
+        for i in attack:
+            if saxon.health <=0:
+
+                self.saxonArmy.pop()
+                return attack
+
+                
+            
+    def saxonAttack(self):
+
+        saxon=random.choice(self.saxonArmy)
+        viking=random.choice(self.vikingArmy)
+
+        attack = viking.receiveDamage(saxon.attack())
+
+        for i in attack:
+            if viking.health <=0:
+
+                self.vikingArmy.pop()
+                return attack
+
+    def showStatus(self):
+
+        if self.vikingArmy == 0:
+
+            return f"Saxons have fought for their lives and survive another day..."
+            return f"Saxons won"
+        if self.saxonArmy == 0:
+
+            return f"vive another day..."
+            return f"Vikings won"
+        
+
+            
+
+            
+
+
+                
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     pass
