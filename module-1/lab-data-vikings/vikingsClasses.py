@@ -59,22 +59,25 @@ class War(Viking, Saxon):
 
     def addViking(self, Viking):
         self.vikingArmy.append(Viking)
-        
-      
+
     def addSaxon(self, Saxon):
         self.saxonArmy.append(Saxon)
-       
-    
+
     def vikingAttack(self):
-         s = super().attack
+        v = random.choice(self.vikingArmy)
+        s = random.choice(self.saxonArmy)
+        Saxon.__init__(self, s.health, s.strength)
+        return Saxon.receiveDamage(self, v.strength)
+        if (s.health - v.strength) <=0:
+            self.saxonArmy.remove(s)
 
-         
-
-        
-
-        
-
-
+    def saxonAttack(self):
+        v = random.choice(self.vikingArmy)
+        s = random.choice(self.saxonArmy)
+        Viking.__init__(self, v.name, v.health, v.strength)
+        return Viking.receiveDamage(self, s.strength)
+        if (v.health - s.strength) <=0:
+            self.vikingArmy.remove(v)
         
 
     def showStatus(self):
@@ -84,4 +87,7 @@ class War(Viking, Saxon):
             return f"Saxons have fought for their lives and survive another day..."
         if self.vikingArmy and self.saxonArmy:
             return f"Vikings and Saxons are still in the thick of battle."
+
+
+
 
