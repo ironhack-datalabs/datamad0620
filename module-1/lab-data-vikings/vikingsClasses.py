@@ -49,7 +49,6 @@ class Saxon(Soldier):
 
 
 
-
 # War
 
 
@@ -88,4 +87,3 @@ class War():
             return "Saxons have fought for their lives and survive another day..."
         elif len(self.vikingArmy) >0 and len(self.saxonArmy) > 0:
             return "Vikings and Saxons are still in the thick of battle."
-
