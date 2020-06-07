@@ -1,24 +1,87 @@
 
 # Soldier
-
+import random
 
 class Soldier:
+    def __init__(self, health, strength):
+        self.health = health 
+        self.strength = strength
+    def attack (self):
+        return self.strength
+    def receiveDamage (self, damage):
+        self.health =self.health - damage 
     pass
-
 # Viking
 
+class Viking(Soldier):
+    def __init__ (self, name , health, strength):
+        super().__init__(health,strength)
+        self.name = name
 
-class Viking:
+    def receiveDamage (self, damage):
+        super().receiveDamage(damage)
+        if self.health > 0:
+            return f"{self.name} has received {damage} points of damage"
+        else: 
+            return f"{self.name} has died in act of combat"
+    
+    def battleCry (self):
+        return 'Odin Owns You All!'
     pass
 
 # Saxon
 
 
-class Saxon:
+class Saxon (Soldier):
+    def __init__ (self, health, strength):
+        super().__init__(health,strength)
+    
+    def receiveDamage (self, damage):
+       
+        super().receiveDamage(damage)
+        if self.health > 0:
+            return f"A Saxon has received {damage} points of damage"
+        else : 
+            return f"A Saxon has died in combat"
     pass
+    
 
 # War
 
 
-class War:
-    pass
+class War():
+    def __init__ (self):
+        self.vikingArmy = []
+        self.saxonArmy = []
+
+    def addViking (self, Viking):
+        self.vikingArmy.append(Viking)
+
+    def addSaxon (self, Saxon):
+        self.saxonArmy.append(Saxon)
+
+    def vikingAttack (self):
+        sax = random.choice(self.saxonArmy)
+        vik = random.choice(self.vikingArmy)
+    
+        if sax in (self.health) <= 0 :
+            self.vikingArmy.remove(sax)
+        
+    
+    def saxonAttack (self):
+        sax = random.choice(self.saxonArmy)
+        vik= random.choice(self.vikingArmy)
+    
+        if vik in (self.health) <= 0 :
+            self.vikingArmy.remove(vik)
+        
+        
+    
+
+    def showStatus (self):
+        if self.vikingArmy == [] :
+            return  f"Saxons have fought for their lives and survive another day..."
+        elif self.saxonArmy == [] :
+            return f"Vikings have won the war of the century!"
+        else :
+            return f"Vikings and Saxons are still in the thick of battle."
