@@ -44,19 +44,24 @@ class Saxon(Soldier):
             return "A Saxon has died in combat"
         
     pass
-"""
-# War
 
+# War
+import random
 
 class War:
-    vikingArmy=[]
-    saxonArmy=[]
+    def __init__(self):
+        self.vikingArmy=[]
+        self.saxonArmy=[]
     def addViking(self,viking="Viking"):
-        self.vikingArmy.append(viking)*10
+        self.vikingArmy.append(self.viking*10)
     def addSaxon(self,saxon="Saxon"):
-        self.saxonArmy.append(saxon)*10
+        self.saxonArmy.append(self.saxon*10)
     def vikingAttack(self):
 
 
+    def saxonAttack(self):
+    
+    def showStatus(self):
+
+
 #### `vikingAttack()` method
-"""
