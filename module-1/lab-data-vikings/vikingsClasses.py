@@ -1,5 +1,4 @@
 
-"""
 # Soldier
 
 class Soldier:
@@ -46,7 +45,7 @@ class Saxon(Soldier):
              return f"A Saxon has received {damage} points of damage"
          else: 
              return "A Saxon has died in combat"
-"""
+
 
 # War
 
