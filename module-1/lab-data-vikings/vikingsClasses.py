@@ -88,16 +88,17 @@ class War:
         random_saxon=random.choice(self.saxonArmy)
         random_viking=random.choice(self.vikingArmy)
         resultado=random_viking.receiveDamage(random_saxon.attack())
-        if resultado=="{self.name} has died in act of combat":
+        if resultado=="{random_viking.name} has died in act of combat":
             self.vikingArmy.remove(random_viking)
         return resultado
+        
 
     def showStatus(self):
-        if self.saxonArmy==[]:
+        if len(self.saxonArmy)==0:
             return f"Vikings have won the war of the century!"
-        elif self.vikingArmy==[]:
+        elif len(self.vikingArmy)==0:
             return f"Saxons have fought for their lives and survive another day..."
-        else:
+        elif (len(self.saxonArmy)>=1) and (len(self.vikingArmy)>=1):
             return f"Vikings and Saxons are still in the thick of battle."
 
     pass

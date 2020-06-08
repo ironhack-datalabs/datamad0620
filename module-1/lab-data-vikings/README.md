@@ -183,7 +183,7 @@ Modify the `Viking` constructor function, have it inherit from `Soldier`, reimpl
 - should be a function
 - should receive **1 argument** (the damage)
 - should remove the received damage from the `health` property
-- **if the `Viking` is still alive**, it should return **"NAME has received DAMAGE points of damage"**
+- **if the `Viking` is still alive**, it should return **"**NAME has received DAMAGE points of damage"
 - **if the `Viking` dies**, it should return **"NAME has died in act of combat"**
 
 #### `battleCry()` method
