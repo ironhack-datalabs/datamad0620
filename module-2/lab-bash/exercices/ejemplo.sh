@@ -54,7 +54,11 @@ sencilla. «palabra o palabras» es el texto que
  queremos probar. «/home/redeszone» es la ruta sobre
  la que se realizará la búsqueda.'''
 
- # Bonus
+#Bonus
+#Almacena en una variable name tu nombre.
+name='Nicola'
+#Imprime esa variable.
+echo $name
 #Crea un directorio nuevo que se llame como el contenido de la variable name.
 mkdir Nicola
 #Elimina ese directorio.
