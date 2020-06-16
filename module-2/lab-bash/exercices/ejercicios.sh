@@ -45,3 +45,13 @@ find ./lorem  -type f -name "*.txt"
 
 #16
 wc -l ./lorem/sed.txt
+
+#17
+ls -d */  lorem*
+
+#18
+grep  
+
+#18grep -r -F " et " ./lorem/at.txt
+#19grep -r -F " et " ./lorem/at.txt | wc -l
+#20grep -r -F " et " ./lorem-copy | wc -l
