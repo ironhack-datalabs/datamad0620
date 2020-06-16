@@ -1,6 +1,6 @@
 #Imprime en consola Hello World.
 echo hello world
-#Crea un directorio nuevo llamado new_dir.
+#Crea un directorio nuevo llamado new_dir.cd
 mkadir new_dir
 #Elimina ese directorio.
 rmdir new_dir
@@ -51,10 +51,10 @@ lorem/at.txt | grep -c "et"
 #Cuenta el número de apariciones del string et en todos los archivos del directorio lorem-co
 lab-bash % less lorem-copy/*txt | grep -c "et"
 
-
-
-
-
+name="Nerea"
+echo $name
+mkdir $name
+rmdir Nerea
 
 
 
