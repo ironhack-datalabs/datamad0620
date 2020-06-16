@@ -37,4 +37,4 @@ grep -r -F " et " ./lorem/at.txt
 grep -r -F " et " ./lorem/at.txt | wc -l
 # Ejer 19. Cuenta el número de apariciones del string `et` en todos los archivos del directorio lorem-copy. 
 grep -r -F " et " ./lorem-copy | wc -l
-## Ficheros bash
+
