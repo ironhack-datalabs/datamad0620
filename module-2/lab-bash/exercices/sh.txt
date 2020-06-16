@@ -17,3 +17,13 @@ wc -l lorem/sed.txt
 find lorem | wc -l
 grep 'et' lorem/at.txt
 grep -o 'et' lorem-copy/* | wc -l
+
+touch list_file.sh
+ls -l list_file.sh
+bash list_file.sh
+
+Bonus
+
+echo $name
+mkdir name
+rmdir name
