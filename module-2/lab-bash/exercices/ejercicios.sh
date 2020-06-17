@@ -50,8 +50,12 @@ wc -l ./lorem/sed.txt
 ls -d */  lorem*
 
 #18
-grep  
+grep -r -F " et " ./lorem/at.txt
 
-#18grep -r -F " et " ./lorem/at.txt
-#19grep -r -F " et " ./lorem/at.txt | wc -l
-#20grep -r -F " et " ./lorem-copy | wc -l
+#19
+grep -r -F " et " ./lorem/at.txt | wc -l
+
+#20
+grep -r -F " et " ./lorem-copy | wc -l
+
+#Bash
