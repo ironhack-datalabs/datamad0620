@@ -65,3 +65,35 @@ Cuenta el número de apariciones del string et en at.txt dentro de la carpeta lo
 
 Cuenta el número de apariciones del string et en todos los archivos del directorio lorem-copy.
     grep -c et lorem-copy/* | wc -l
+
+
+BONUS
+
+
+Almacena en una variable name tu nombre.
+    me = Jaime???
+
+Imprime esa variable.
+    echo me
+
+Crea un directorio nuevo que se llame como el contenido de la variable name.
+    mkdir 
+
+Elimina ese directorio.
+
+Por cada archivo dentro de la carpeta lorem imprime el número de carácteres que tienen sus nombres. Intenta primero mostrar los archivos mediante un bucle for
+
+Imprime los ficheros
+Imprime las longitudes de los nombres de los ficheros
+Imprime outputs con la siguiente estructura: lorem has 5 characters lenght
+Muestra los procesos de forma jerárquica que se están ejecutando en tu ordenador:
+
+Usando el comando top o htop
+Usando el comando ps con argumentos
+Muestra información sobre tu procesador por pantalla
+
+Crea 3 alias y haz que estén disponibles cada vez que inicias sesión
+
+Comprime las carpetas lorem y lorem-copy en un archivo llamado lorem-compressed.tar.gz
+
+Descomprime el archivo lorem-compressed.tar.gz en la carpeta lorem-uncompressed
