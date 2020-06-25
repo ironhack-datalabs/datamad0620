@@ -3,3 +3,4 @@
 venv/
 .ipynb_checkpoints
 __pycache__/
+module-2/lab-advance-querying-mongo/companies.json
