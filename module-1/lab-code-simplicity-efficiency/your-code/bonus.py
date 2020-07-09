@@ -54,3 +54,5 @@ total_steps = input("How many steps in the stair?")
 new_challenge = ClimbStairs(int(total_steps))
 print('Ways to climb to top: ' + str(new_challenge.solve()))
 print('Total calculations performed: ' + str(new_challenge.get_calculation_count()))
+
+
