@@ -12,6 +12,12 @@ For example, if the stair has 4 steps, there are 5 ways to climb to the top:
 The following class calculates the total ways to climb a stair with the specified number of steps.
 It also counts the number of calculations performed which indicates the efficiency of the code.
 Try if you can improve the performance of the code.
+
+def calc_solutions(total_steps):
+    return ((int(total_steps)//2)+1)
+
+total_steps = input("How many steps in the stair?")
+print(f'Ways to climb to top: {calc_solutions(total_steps)}')
 """
 
 class ClimbStairs:
