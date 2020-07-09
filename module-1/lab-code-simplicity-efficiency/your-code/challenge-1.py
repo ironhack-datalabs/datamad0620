@@ -22,6 +22,9 @@ if a in range(6) and c in range(6):
     if b=="minus":
         sol = a - c
         print(f"{a} {b} {c} equals {sol}")
+    else:
+        print("I am not able to answer this question. Please choose plus or minus.")
+
 
 
 else:
