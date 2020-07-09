@@ -8,7 +8,7 @@ about simple and efficient code, refactor the code.
 """
 import random
 import string
-import sys
+
 
 def RandomStringGenerator(l):
     return ''.join([random.choice(string.ascii_letters) for i in range(l)])
@@ -22,7 +22,7 @@ def BatchStringGenerator(n,a,b):
         elif a == b:
             c = a
         else:
-            sys.exit('Incorrect min and max string lengths. Try again.')
+            raise ValueError('Incorrect min and max string lengths. Try again.')
         r.append(RandomStringGenerator(c))
     return r
 

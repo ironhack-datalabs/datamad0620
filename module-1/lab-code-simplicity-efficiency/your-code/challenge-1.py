@@ -35,7 +35,7 @@ def calculadora(nu1, ope, nun2):
             
 print(calculadora(a,b,c))
 
-if (not a == 'zero' and not a == 'one' and not a == 'two' and not a == 'three' and not a == 'four' and not a == 'five') or (not c == 'zero' and not c == 'one' and not c == 'two' and not c == 'three' and not c == 'four' and not c == 'five') or (not b == 'plus' and not b == 'minus'):
+if(a or c not in letras[range(0,10)] and b != "plus" or "minus"):
     print("I am not able to answer this question. Check your input.")
 
 print("Thanks for using this calculator, goodbye :)")
