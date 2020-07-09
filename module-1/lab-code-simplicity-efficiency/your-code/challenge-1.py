@@ -15,6 +15,7 @@ a = input('Please choose your first number (zero to five): ')
 b = input('What do you want to do? plus or minus: ')
 c = input('Please choose your second number (zero to five): ')
 
+
 if a == 'zero' and b == 'plus'  and c == 'zero':
     print("zero plus zero equals zero")
 if a == 'zero' and b == 'plus'  and c == 'one':
@@ -86,8 +87,7 @@ if a == 'five' and b == 'plus'  and c == 'three':
 if a == 'five' and b == 'plus'  and c == 'four':
     print("five plus four equals nine")
 if a == 'five' and b == 'plus'  and c == 'five':
-    print("five plus five equals ten")
-
+    print("five plus five equals ten")#
 
 if a == 'zero' and b == 'minus' and c == 'zero':
     print("zero minus zero equals zero")
@@ -160,9 +160,7 @@ if a == 'five' and b == 'minus' and c == 'three':
 if a == 'five' and b == 'minus' and c == 'four':
     print("five minus four equals one")
 if a == 'five' and b == 'minus' and c == 'five':
-    print("five minus five equals zero")
-
-
+    print("five minus five equals zero")#  
 if (not a == 'zero' and not a == 'one' and not a == 'two' and not a == 'three' and not a == 'four' and not a == 'five') or (not c == 'zero' and not c == 'one' and not c == 'two' and not c == 'three' and not c == 'four' and not c == 'five') or (not b == 'plus' and not b == 'minus'):
     print("I am not able to answer this question. Check your input.")
 
