@@ -15,6 +15,29 @@ a = input('Please choose your first number (zero to five): ')
 b = input('What do you want to do? plus or minus: ')
 c = input('Please choose your second number (zero to five): ')
 
+dict_number = {'zero':0, 'one':1, 'two':2, 'three':3, 'four':4, 'five':5}
+dict2_number = {0:'zero',1:'one',2:'two',3:'three',4:'four',5:'five',6:'six',7:'seven',8:'eight',9:'nine', 10: 'ten'}
+
+
+
+def getresult(a,b,c):
+    if a not in dict_number or c not in dict_number:
+        return "I am not able to answer this question. Check your input."   
+    if b == 'plus':  
+        result = dict_number[a] + dict_number[c]
+        return f"{a} plus {c} equals {dict2_number[result]}"
+    else:
+        result = dict_number[a] - dict_number[c]
+        return f"{a} minus {c} equals negative {dict2_number[abs(result)]}" if a > c else f"{a} minus {c} equals {dict2_number[result]}"
+ 
+            
+    
+
+print(getresult(a,b,c))
+print("Thanks for using this calculator, goodbye :)")
+
+
+'''
 if a == 'zero' and b == 'plus'  and c == 'zero':
     print("zero plus zero equals zero")
 if a == 'zero' and b == 'plus'  and c == 'one':
@@ -166,4 +189,4 @@ if a == 'five' and b == 'minus' and c == 'five':
 if (not a == 'zero' and not a == 'one' and not a == 'two' and not a == 'three' and not a == 'four' and not a == 'five') or (not c == 'zero' and not c == 'one' and not c == 'two' and not c == 'three' and not c == 'four' and not c == 'five') or (not b == 'plus' and not b == 'minus'):
     print("I am not able to answer this question. Check your input.")
 
-print("Thanks for using this calculator, goodbye :)")
+print("Thanks for using this calculator, goodbye :)")'''

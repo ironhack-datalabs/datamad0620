@@ -6,7 +6,7 @@ the strings being generated.
 The code is functional but has a lot of room for improvement. Use what you have learned
 about simple and efficient code, refactor the code.
 """
-
+'''
 def RandomStringGenerator(l=12, a=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9']):
     p = 0
     s = ''
@@ -36,3 +36,22 @@ b = input('Enter maximum string length: ')
 n = input('How many random strings to generate? ')
 
 print(BatchStringGenerator(int(n), int(a), int(b)))
+'''
+
+import random
+import string
+
+a = int(input('Enter minimum string length: '))
+b = int(input('Enter maximum string length: '))
+n = int(input('How many random strings to generate? '))
+every_digit = string.ascii_letters + string.digits
+
+def createPassword():
+    if a == b:
+        return [''.join([random.choice(every_digit) for _ in range(a)]) for _ in range(n)]
+    elif a < b:
+        return [''.join([random.choice(every_digit) for _ in range(random.choice(range(a, b)))]) for _ in range(n)]
+    else:
+        return 'Incorrect min and max string lengths. Try again.'
+
+print(createPassword())
