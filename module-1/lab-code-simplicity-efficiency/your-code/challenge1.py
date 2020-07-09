@@ -1,3 +1,46 @@
+
+number = {'zero': 0, 'one' : 1, 'two': 2, 'three': 3, 'four': 4,'five': 5, "six" : 6, 
+"seven":7, "eight": 8, "nine": 9, "ten":10}
+
+def userinputs():
+    print('Welcome to this calculator!')
+    print('It can add and subtract whole numbers from zero to five')
+    a = input('Please choose your first number (zero to five): ')
+    b = input('What do you want to do? plus or minus: ')
+    c = input('Please choose your second number (zero to five): ')
+    return a,b,c
+
+def checkifvalid(a,b,c): 
+    if a not in list(number.keys())[:6] or c not in list(number.keys())[:6] or b not in ["plus", "minus"]:
+        print("I am not able to answer this question. Check your input.")
+        return False
+    return True
+
+a,b,c = userinputs()
+
+def calculator(number):
+    if checkifvalid(a,b,c):
+        x = (number[a])
+        y = (number[c])
+        if b == "plus":
+            suma = x+y
+            for key, value in number.items():
+                if suma == value:
+                    print(f"{a} plus {c} equals {key}")
+        if b == "minus":
+            resta = x-y
+            for key, value in number.items():
+                if abs(resta) == value:
+                    if y <= x:
+                        print(f"{a} minus {c} equals {key}")
+                    else:
+                        print(f"{a} minus {c} equals negative {key}")
+calculator(number)
+
+
+
+
+
 """
 This is a dumb calculator that can add and subtract whole numbers from zero to five.
 When you run the code, you are prompted to enter two numbers (in the form of English
@@ -7,7 +50,7 @@ expects.
 
 The code is very long and messy. Refactor it according to what you have learned about
 code simplicity and efficiency.
-"""
+
 
 print('Welcome to this calculator!')
 print('It can add and subtract whole numbers from zero to five')
@@ -167,3 +210,4 @@ if (not a == 'zero' and not a == 'one' and not a == 'two' and not a == 'three' a
     print("I am not able to answer this question. Check your input.")
 
 print("Thanks for using this calculator, goodbye :)")
+"""
