@@ -12,11 +12,15 @@ def userinputs():
     c = input('Please choose your second number (zero to five): ')
     return a,b,c
 
+
+## este bloque sacado de companero. Rehacer. 
 def checkifvalid(a,b,c): 
     if a not in list(number.keys())[:6] or c not in list(number.keys())[:6] or b not in ["plus", "minus"]:
         print("I am not able to answer this question. Check your input.")
         return False
     return True
+## hasta aqui
+
 
 a,b,c = userinputs()
 
@@ -26,19 +30,20 @@ def calculator(number):
         y = (number[c])
         if b == "plus":
             suma = x+y
-            for key, value in number.items():
-                if suma == value:
-                    print(f"{a} plus {c} equals {key}")
+            for k, v in number.items():
+                if suma == v:
+                    print(f"{a} plus {c} equals {k}")
         if b == "minus":
             resta = x-y
-            for key, value in number.items():
-                if abs(resta) == value:
+            for k, v in number.items():
+                if abs(resta) == v:
                     if y <= x:
-                        print(f"{a} minus {c} equals {key}")
+                        print(f"{a} minus {c} equals {k}")
                     else:
-                        print(f"{a} minus {c} equals negative {key}")
-calculator(number)
+                        print(f"{a} minus {c} equals negative {k}")
 
+
+print("Thanks for using this calculator, goodbye :)")
 
 """
 This is a dumb calculator that can add and subtract whole numbers from zero to five.
@@ -49,7 +54,7 @@ expects.
 
 The code is very long and messy. Refactor it according to what you have learned about
 code simplicity and efficiency.
-"""
+
 
 print('Welcome to this calculator!')
 print('It can add and subtract whole numbers from zero to five')
@@ -209,3 +214,5 @@ if (not a == 'zero' and not a == 'one' and not a == 'two' and not a == 'three' a
     print("I am not able to answer this question. Check your input.")
 
 print("Thanks for using this calculator, goodbye :)")
+
+"""
