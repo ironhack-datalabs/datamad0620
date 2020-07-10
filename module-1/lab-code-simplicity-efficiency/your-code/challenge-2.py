@@ -26,7 +26,9 @@ def BatchStringGenerator(a,b,n,alph=alph):
         return l
     else:
         raise Exception('Incorrect min and max string lengths. Try again.')
-
+a = input('Enter minimum string length: ')
+b = input('Enter maximum string length: ')
+n = input('How many random strings to generate? ')
 print(BatchStringGenerator(int(n), int(a), int(b)))
 
 
