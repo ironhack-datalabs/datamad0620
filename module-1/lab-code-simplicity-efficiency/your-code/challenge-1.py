@@ -15,6 +15,45 @@ a = input('Please choose your first number (zero to five): ')
 b = input('What do you want to do? plus or minus: ')
 c = input('Please choose your second number (zero to five): ')
 
+dict_num={
+0:"zero",
+1:"one",
+2:"two",
+3:"three",
+4:"four",
+5:"five",
+6:"six",
+7:"seven",
+8:"eight",
+9:"nine",
+10:"ten",
+-1:"negative one",
+-2:"negative two",
+-3:"negative three",
+-4:"negative four",
+-5:"negative five"
+}
+
+def getInt(num_string):
+    try:
+        for num, string in dict_num.items():
+            if num_string == string:
+                return num
+    except:
+        print("I am not able to answer this question. Check your input.")
+
+if b == "plus":
+    result = getInt(a) + getInt(c)
+elif b == "minus":
+    result = getInt(a) - getInt(c)
+else:
+    print("I am not able to answer this question. Check your input.")
+print(result)
+print(f"{a} {b} {c} equals {dict_num[result]}")
+print("Thanks for using this calculator, goodbye :)")
+
+
+"""
 if a == 'zero' and b == 'plus'  and c == 'zero':
     print("zero plus zero equals zero")
 if a == 'zero' and b == 'plus'  and c == 'one':
@@ -167,3 +206,4 @@ if (not a == 'zero' and not a == 'one' and not a == 'two' and not a == 'three' a
     print("I am not able to answer this question. Check your input.")
 
 print("Thanks for using this calculator, goodbye :)")
+"""
