@@ -16,6 +16,19 @@ def RandomStringGenerator(l=12, a=['a','b','c','d','e','f','g','h','i','j','k','
         p += 1
     return s
 
+
+
+def random_string_generator(l=12, letter_pool=ascii_lowercase):
+    return "".join([choice(letter_pool) for p in range(l)
+        
+                   
+                    
+               
+
+
+
+
+
 def BatchStringGenerator(n, a=8, b=12):
     r = []
     for i in range(n):
