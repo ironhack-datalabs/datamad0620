@@ -10,7 +10,6 @@ For example, if you are given the number 15, there are 3 possibilities to compos
 
 The following function shows one way to solve the problem but the code is not ideal or efficient.
 Refactor the code based on what you have learned about code simplicity and efficiency.
-"""
 
 def my_function(X):
     solutions = []
@@ -28,3 +27,29 @@ def my_function(X):
 X = input("What is the maximal length of the triangle side? Enter a number: ")
 
 print("The longest side possible is " + str(my_function(int(X))))
+"""
+#Solucion de felipe
+
+from random_words import get_param
+from math import floor
+
+
+def largest_edge(n):
+    for h in range(n,0,-1):
+        h2 = h**2
+        low_limit = floor((h2/2)**.5)
+        """Since `h**2 == a**2+b**2`, the largest value possible
+           for `a` and `b` is `(h**2/2)**.5`, the case in witch both
+           catheti have the same size. Considering that and that no
+           right triangle exists with a cathetus the same size as the
+           hypothenuse, we can safely define the range bellow.""" 
+        for a in range(h-1,low_limit,-1):
+            b = (h2-a**2)**.5
+            if b == int(b) != 0:
+                return list(map(int,(h,a,b)))
+
+if __name__ == "__main__":
+    n = get_param("What is the maximal length of the triangle side? Enter a number: ")
+    res = largest_edge(n)
+    if res: print(f"The longest side possible is {res[0]} in triangle {res}")
+    else: print("It was not possible to find such a triangle.")

@@ -54,3 +54,57 @@ total_steps = input("How many steps in the stair?")
 new_challenge = ClimbStairs(int(total_steps))
 print('Ways to climb to top: ' + str(new_challenge.solve()))
 print('Total calculations performed: ' + str(new_challenge.get_calculation_count()))
+
+
+'''
+
+"""
+You are climbing a stair case. It takes n steps to reach to the top.
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+For example, if the stair has 4 steps, there are 5 ways to climb to the top:
+1) 1, 1, 1, 1
+2) 1, 2, 1
+3) 1, 1, 2
+4) 2, 1, 1
+5) 2, 2
+
+The following class calculates the total ways to climb a stair with the specified number of steps.
+It also counts the number of calculations performed which indicates the efficiency of the code.
+Try if you can improve the performance of the code.
+"""
+
+from random_words import get_param
+from math import factorial
+
+class ClimbStairs:    
+    def __init__(self, total_steps=10): 
+        """class constructor
+           total_steps: how many steps in total in the stair.""" 
+        self.total_steps = total_steps
+        self.calculation_count = 0
+        self.solutions = 0
+
+    def calc_solutions(self):
+        """This function checks for the quantity of steps of value 2.
+           i.e.: the number of times you climb two steps at once"""
+        for n in range(0,self.total_steps+1,2):
+            self.calculation_count +=1
+            ones = self.total_steps - n
+            self.solutions += self.permutations(ones,n/2)
+
+    def permutations(self,p,n):
+        """Using permutations, we can easily calculate how
+           many diferent ways we can climb the stairs with `n` double steps."""
+        return factorial(p+n)/(factorial(p)*factorial(n))
+
+    def solve(self):
+        self.calc_solutions()
+        return self.solutions
+
+if __name__ == "__main__":
+    total_steps = get_param("How many steps in the stair? ")
+    new_challenge = ClimbStairs(total_steps)
+    print(f'Ways to climb to top: {new_challenge.solve()}')
+    print(f'Total calculations performed: {new_challenge.calculation_count}')
+'''    
